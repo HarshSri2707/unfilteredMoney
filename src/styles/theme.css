@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for Easy Theme Customization */
+:root {
+  /* Colors - Primary */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-600: #0ea5e9;
+  --color-primary-700: #0284c7;
+
+  /* Colors - Accent */
+  --color-accent-50: #fdf4ff;
+  --color-accent-600: #d946ef;
+  --color-accent-700: #c026d3;
+
+  /* Colors - Neutral */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-600: #525252;
+  --color-neutral-900: #171717;
+
+  /* Spacing & Others */
+  --radius-md: 0.5rem;
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    /* Safe border color override */
+    border-color: var(--color-neutral-200);
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-neutral-900 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply font-bold;
+  }
+
+  /* Accessibility focus - Using direct CSS to avoid build errors */
+  :focus-visible {
+    outline: 2px solid var(--color-primary-600);
+    outline-offset: 2px;
+  }
+}
+
+/* Component Utilities */
+@layer components {
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Gradient Text - Optimized */
+  .gradient-text {
+    background: linear-gradient(to right, var(--color-primary-600), var(--color-accent-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glass Effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Card Hover Effect */
+  .card-hover {
+    transition: all var(--transition-base);
+  }
+
+  .card-hover:hover {
+    @apply shadow-xl -translate-y-2;
+  }
+}
+
+/* Custom Animations & Utilities */
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(
+      to right,
+      var(--color-neutral-100) 0%,
+      var(--color-neutral-200) 20%,
+      var(--color-neutral-100) 40%,
+      var(--color-neutral-100) 100%
+    );
+    background-size: 1000px 100%;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+
+  /* Fade animations using standard CSS */
+  .fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+/* Prose Styling for Blog Content */
+.prose {
+  color: var(--color-neutral-600);
+  line-height: 1.75;
+}
+
+.prose h2 { @apply text-2xl font-bold text-neutral-900 mt-8 mb-4; }
+.prose p { @apply mb-4; }
+.prose a { 
+  color: var(--color-primary-600);
+  @apply underline transition-colors;
+}
+.prose a:hover {
+  color: var(--color-primary-700);
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--color-primary-600);
+  @apply pl-4 italic my-6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+/* Selection Color */
+::selection {
+  background: var(--color-primary-600);
+  color: white;
+}
