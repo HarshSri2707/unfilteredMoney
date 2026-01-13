@@ -17,10 +17,22 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Menu band karne ke liye jab route change ho ya scroll lock handle ho
   useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
+    document.body.style.overflow = 'unset'; // Reset scroll
   }, [location]);
+
+  // Mobile menu khulne par background scroll lock karne ke liye
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  };
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -59,7 +71,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white'
+        isScrolled || isOpen ? 'bg-white shadow-md' : 'bg-white'
       }`}
       initial={animationConfig.navbarSlide.initial}
       animate={animationConfig.navbarSlide.animate}
@@ -94,7 +106,6 @@ const Navbar = () => {
                   {link.name}
                 </Link>
 
-                {/* Dropdown Menu */}
                 {link.dropdown && (
                   <AnimatePresence>
                     {activeDropdown === link.name && (
@@ -122,7 +133,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 rounded-lg text-neutral-700 hover:bg-neutral-100"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,31 +147,36 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Fixed and Scrollable */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="lg:hidden bg-white border-t border-neutral-200"
-            {...animationConfig.mobileMenuSlide}
+            className="fixed top-16 left-0 right-0 bottom-0 bg-white z-40 overflow-y-auto lg:hidden"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-4 py-6 space-y-4 pb-20"> {/* Bottom padding added for scroll space */}
               {navLinks.map((link) => (
-                <div key={link.name}>
+                <div key={link.name} className="border-b border-neutral-50 pb-2">
                   <Link
                     to={link.path}
-                    className="block px-4 py-2 rounded-lg text-neutral-700 hover:bg-primary-50 hover:text-primary-600"
+                    className={`block px-4 py-2 font-semibold text-lg ${
+                      location.pathname === link.path ? 'text-primary-600' : 'text-neutral-800'
+                    }`}
                   >
                     {link.name}
                   </Link>
                   {link.dropdown && (
-                    <div className="ml-4 mt-1 space-y-1">
+                    <div className="ml-4 mt-2 grid grid-cols-1 gap-1">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.name}
                           to={item.path}
-                          className="block px-4 py-2 text-sm text-neutral-600 hover:text-primary-600"
+                          className="block px-4 py-2 text-sm text-neutral-500 active:text-primary-600 active:bg-primary-50 rounded-md"
                         >
-                          {item.name}
+                          • {item.name}
                         </Link>
                       ))}
                     </div>
