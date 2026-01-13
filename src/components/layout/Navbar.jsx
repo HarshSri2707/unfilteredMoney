@@ -52,7 +52,7 @@ const Navbar = () => {
       ],
     },
     { name: 'Blog', path: '/blog' },
-    { name: 'About', path: '/about' },
+    { name: 'About Us', path: '/aboutus' },
     { name: 'Contact', path: '/contact' },
   ];
 

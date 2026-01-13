@@ -288,9 +288,9 @@ const About = () => {
               We Are the Financial Friends Who Tell You the{' '}
               <span className="text-primary-300 relative inline-block">
                 Ugly Truth
-                <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
+                {/* <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
                   <path d="M0 4C50 8 150 0 200 4" stroke="currentColor" strokeWidth="3" />
-                </svg>
+                </svg> */}
               </span>
             </h1>
 

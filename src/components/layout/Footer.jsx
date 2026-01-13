@@ -19,7 +19,7 @@ const Footer = () => {
       title: 'Resources',
       links: [
         { name: 'Blog', path: '/blog' },
-        { name: 'About Us', path: '/about' },
+        { name: 'About Us', path: '/aboutus' },
         { name: 'Contact', path: '/contact' },
         { name: 'FAQs', path: '/faq' },
       ],

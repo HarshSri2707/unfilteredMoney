@@ -15,7 +15,7 @@ export const seoConfig = {
     },
     about: {
       title: 'About Us - UnfilteredMoney',
-      description: 'Learn about our mission to democratize transparent financial intelligence in India. We tell you the ugly truth about financial products.',
+      description: 'Learn about us our mission to democratize transparent financial intelligence in India. We tell you the ugly truth about financial products.',
       keywords: 'about unfilteredmoney, financial advisors india, transparent advice',
     },
     creditCards: {

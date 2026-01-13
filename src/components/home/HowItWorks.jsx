@@ -159,28 +159,28 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24 bg-neutral-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-16 bg-neutral-50 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-        {/* LEFT STEPS (Animated from Left) */}
-        <div className="space-y-6 order-2 lg:order-1">
+        {/* LEFT STEPS */}
+        <div className="space-y-4 order-2 lg:order-1">
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, x: -60 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.2, duration: 0.6 }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
             >
-              <Card hover className="p-6 flex gap-5 items-center bg-white border-none shadow-sm group">
-                <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+              <Card hover className="p-5 flex gap-4 items-center bg-white border-none shadow-sm group">
+                <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
                   {step.icon}
                 </div>
                 <div>
-                  <h3 className="font-bold text-neutral-900 text-lg">
+                  <h3 className="font-bold text-neutral-900 text-md">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-neutral-600">
+                  <p className="text-xs text-neutral-600">
                     {step.description}
                   </p>
                 </div>
@@ -189,33 +189,33 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        {/* RIGHT CONTENT (Animated from Right) */}
+        {/* RIGHT CONTENT */}
         <motion.div
           className="order-1 lg:order-2"
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-4 leading-tight">
             How We Evaluate <br />
             <span className="text-primary-600">Financial Products</span>
           </h2>
 
-          <p className="text-xl text-neutral-600 leading-relaxed mb-8">
+          <p className="text-lg text-neutral-600 leading-relaxed mb-6">
             Our process is designed to expose hidden costs and marketing traps 
             before they hit your wallet.
           </p>
 
           <motion.div 
-            initial={{ scale: 0.95, opacity: 0 }}
+            initial={{ scale: 0.98, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="bg-primary-600 p-6 rounded-2xl shadow-lg text-white"
+            transition={{ delay: 0.3 }}
+            className="bg-primary-600 p-5 rounded-xl shadow-lg text-white"
           >
-            <p className="text-lg font-medium">
+            <p className="text-md font-medium">
               💡 <strong>No commissions. No incentives.</strong><br />
-              <span className="opacity-90">Just brutally honest financial reviews.</span>
+              <span className="opacity-90 text-sm">Just brutally honest financial reviews.</span>
             </p>
           </motion.div>
         </motion.div>

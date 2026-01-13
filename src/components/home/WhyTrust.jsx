@@ -96,34 +96,34 @@ const WhyTrust = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 }
+      transition: { staggerChildren: 0.15 }
     }
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
   };
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="pt-12 pb-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
         {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-4 leading-tight">
             Why Trust <br />
             <span className="text-primary-600">UnfilteredMoney?</span>
           </h2>
-          <p className="text-xl text-neutral-600 leading-relaxed max-w-md">
+          <p className="text-lg text-neutral-600 leading-relaxed max-w-md">
             We’re not here to sell you products. We’re here to protect you from the traps hidden in the fine print.
           </p>
-          <div className="mt-8 h-1 w-20 bg-primary-600 rounded-full" />
+          <div className="mt-6 h-1 w-16 bg-primary-600 rounded-full" />
         </motion.div>
 
         {/* RIGHT CARDS */}
@@ -138,12 +138,12 @@ const WhyTrust = () => {
             <motion.div
               key={idx}
               variants={cardVariants}
-              whileHover={{ y: -10, transition: { duration: 0.2 } }}
-              className={`p-6 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-xl transition-shadow bg-white ${idx === 2 ? 'sm:col-span-2' : ''}`}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className={`p-5 rounded-xl border border-neutral-100 shadow-sm hover:shadow-md transition-all bg-white ${idx === 2 ? 'sm:col-span-2' : ''}`}
             >
-              <div className="text-4xl mb-4">{reason.icon}</div>
-              <h3 className="text-lg font-bold text-neutral-900 mb-2">{reason.title}</h3>
-              <p className="text-sm text-neutral-500">{reason.description}</p>
+              <div className="text-3xl mb-3">{reason.icon}</div>
+              <h3 className="text-md font-bold text-neutral-900 mb-1">{reason.title}</h3>
+              <p className="text-xs text-neutral-500">{reason.description}</p>
             </motion.div>
           ))}
         </motion.div>

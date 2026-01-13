@@ -119,7 +119,7 @@ const Contact = () => {
 
             {/* Subheading */}
             <p
-              className="text-lg md:text-xl text-gray/90 max-w-2xl mx-auto mb-8 leading-relaxed"
+              className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8 leading-relaxed"
               style={{ fontFamily: 'Lato, sans-serif' }}
             >
               Whether you need expert advice or have feedback, our team is ready to assist you.
