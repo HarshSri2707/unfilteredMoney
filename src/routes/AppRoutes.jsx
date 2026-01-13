@@ -12,6 +12,10 @@ const Investments = lazy(() => import('../pages/Investments'));
 const BlogList = lazy(() => import('../pages/BlogList'));
 const BlogDetail = lazy(() => import('../pages/BlogDetail'));
 const Contact = lazy(() => import('../pages/Contact'));
+const Tools = lazy(() => import('../pages/Tools'));
+const SIPCalculator = lazy(() => import('../pages/SIPCalculator'));
+const TaxCalculator = lazy(() => import('../pages/TaxCalculator'));
+const InsuranceCalculator = lazy(() => import('../pages/InsuranceCalculator'));
 
 // Loading component for page transitions
 const PageLoader = () => (
@@ -61,6 +65,12 @@ const AppRoutes = () => {
           {/* Blog Routes */}
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
+
+          {/* Tools Routes */}
+          <Route path="/tools" element={<Tools />} />
+          <Route path="/tools/sip-calculator" element={<SIPCalculator />} />
+          <Route path="/tools/tax-calculator" element={<TaxCalculator />} />
+          <Route path="/tools/insurance-calculator" element={<InsuranceCalculator />} />
 
           {/* 404 - Not Found */}
           <Route path="*" element={<NotFound />} />

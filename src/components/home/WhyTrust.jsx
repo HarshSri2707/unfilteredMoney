@@ -1,73 +1,155 @@
+
+
+// import { motion } from 'framer-motion';
+
+// const WhyTrust = () => {
+//   const reasons = [
+//     {
+//       icon: '🔍',
+//       title: 'We Read the Fine Print',
+//       description: 'T&Cs analyzed minutely so you make hassle-free decisions',
+//     },
+//     {
+//       icon: '⚖️',
+//       title: 'No Bias',
+//       description: 'Bad products? We say it loud. Only real recommendations',
+//     },
+//     {
+//       icon: '🇮🇳',
+//       title: 'India-Centric',
+//       description: 'Expert understanding of Indian tax laws and market realities',
+//     },
+//   ];
+
+//   return (
+//     <section className="py-8 md:py-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+//       {/* Decorative elements */}
+//       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full blur-3xl opacity-20" />
+//       <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-200 rounded-full blur-3xl opacity-20" />
+      
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+//         <motion.h2
+//           className="text-2xl md:text-3xl font-bold text-neutral-900 text-center mb-6 md:mb-8"
+//           initial={{ opacity: 0, y: 20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}
+//         >
+//           Why Trust UnfilteredMoney?
+//         </motion.h2>
+
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+//           {reasons.map((reason, idx) => (
+//             <motion.div
+//               key={idx}
+//               className="relative bg-white/60 backdrop-blur-md rounded-2xl p-5 border border-white/40 shadow-lg hover:shadow-xl transition-all duration-300"
+//               initial={{ opacity: 0, scale: 0.9 }}
+//               whileInView={{ opacity: 1, scale: 1 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: idx * 0.1 }}
+//               whileHover={{ y: -8 }}
+//             >
+//               {/* Gradient blob */}
+//               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-2xl" />
+              
+//               <div className="relative">
+//                 <div className="text-4xl mb-3">{reason.icon}</div>
+//                 <h3 className="text-lg font-bold text-neutral-900 mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
+//                   {reason.title}
+//                 </h3>
+//                 <p className="text-sm text-neutral-600 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
+//                   {reason.description}
+//                 </p>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default WhyTrust;
+
 import { motion } from 'framer-motion';
-import { animationConfig } from '../../config/animation.config';
 
 const WhyTrust = () => {
   const reasons = [
     {
       icon: '🔍',
-      title: 'We Read the Fine Print',
-      description: 'We analyze T&Cs minutely, so you don\'t have to and can make decisions hassle-free!',
+      title: 'Fine Print',
+      description: 'T&Cs analyzed minutely for you.',
     },
     {
       icon: '⚖️',
       title: 'No Bias',
-      description: 'If a product is bad, we say it aloud, and recommend the best alternatives so you don\'t fall for marketing gimmicks.',
+      description: 'Bad products? We call them out.',
     },
     {
       icon: '🇮🇳',
       title: 'India-Centric',
-      description: 'Our experts understand Indian tax laws, investor emotions, and market realities to suit your specific needs.',
+      description: 'Expert local market understanding.',
     },
   ];
 
-  return (
-    <motion.section
-      className="py-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white"
-      {...animationConfig.sectionReveal}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Why Trust Us?
-          </motion.h2>
-          <motion.p
-            className="text-lg text-primary-100"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            We're the financial friends who tell you the ugly truth
-          </motion.p>
-        </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  };
+
+  return (
+    <section className="py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        {/* LEFT CONTENT */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          variants={animationConfig.staggerContainer}
-          initial="initial"
-          whileInView="animate"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h2 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-6 leading-tight">
+            Why Trust <br />
+            <span className="text-primary-600">UnfilteredMoney?</span>
+          </h2>
+          <p className="text-xl text-neutral-600 leading-relaxed max-w-md">
+            We’re not here to sell you products. We’re here to protect you from the traps hidden in the fine print.
+          </p>
+          <div className="mt-8 h-1 w-20 bg-primary-600 rounded-full" />
+        </motion.div>
+
+        {/* RIGHT CARDS */}
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
         >
-          {reasons.map((reason, index) => (
+          {reasons.map((reason, idx) => (
             <motion.div
-              key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20"
-              variants={animationConfig.staggerItem}
+              key={idx}
+              variants={cardVariants}
+              whileHover={{ y: -10, transition: { duration: 0.2 } }}
+              className={`p-6 rounded-2xl border border-neutral-100 shadow-sm hover:shadow-xl transition-shadow bg-white ${idx === 2 ? 'sm:col-span-2' : ''}`}
             >
-              <div className="text-5xl mb-4">{reason.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
-              <p className="text-primary-100">{reason.description}</p>
+              <div className="text-4xl mb-4">{reason.icon}</div>
+              <h3 className="text-lg font-bold text-neutral-900 mb-2">{reason.title}</h3>
+              <p className="text-sm text-neutral-500">{reason.description}</p>
             </motion.div>
           ))}
         </motion.div>
+
       </div>
-    </motion.section>
+    </section>
   );
 };
 

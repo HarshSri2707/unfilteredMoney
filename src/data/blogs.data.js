@@ -9,7 +9,7 @@ export const blogsData = {
       author: 'Priya Sharma',
       publishedDate: '2025-01-08',
       readTime: '6 min',
-      image: '/images/blog/lifetime-free-trap.webp',
+      image: '/images/blog/lifetime-free.avif',
       tags: ['credit cards', 'hidden fees', 'beginners'],
     },
     {
@@ -21,7 +21,7 @@ export const blogsData = {
       author: 'Rajesh Kumar',
       publishedDate: '2025-01-05',
       readTime: '8 min',
-      image: '/images/blog/lic-vs-term.webp',
+      image: '/images/blog/lic-vs-mutual-funds.avif',
       tags: ['insurance', 'investments', 'financial planning'],
     },
   ],

@@ -5,7 +5,7 @@ export const insuranceData = {
       name: 'HDFC Life Click2Protect',
       type: 'term',
       provider: 'HDFC Life',
-      image: '/images/insurance/hdfc-term.webp',
+      image: '/picks/insurance-1.webp',
       rating: 4.6,
       claimSettlementRatio: '99.1%',
       premiumEstimate: '₹550/month for ₹1Cr cover (30yr, non-smoker)',
