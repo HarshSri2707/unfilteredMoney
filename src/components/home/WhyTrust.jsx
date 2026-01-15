@@ -106,7 +106,7 @@ const WhyTrust = () => {
   };
 
   return (
-    <section className="pt-12 pb-16 bg-white overflow-hidden">
+    <section className="pt-12 pb-16 bg-gradient-to-br from-primary-50 to-blue-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
         {/* LEFT CONTENT */}

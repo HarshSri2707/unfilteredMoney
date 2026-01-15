@@ -257,13 +257,13 @@ const About = () => {
     alt="Team collaboration"
     className="w-full h-full object-cover object-center"
     style={{
-      objectPosition: 'center 30%' // upar ka portion thoda dikhane ke liye
+      objectPosition: 'center 50%' // upar ka portion thoda dikhane ke liye
     }}
     loading="eager"
   />
 
   {/* Very light overlay only for text clarity */}
-  <div className="absolute inset-0 bg-white/10" />
+  <div className="absolute inset-0 bg-white/5" />
 </div>
 
 
@@ -276,9 +276,7 @@ const About = () => {
             className="text-center"
           >
             {/* Badge */}
-            <span className="inline-block px-4 py-2 bg-white/90 backdrop-blur-sm text-primary-700 rounded-full text-sm font-semibold mb-6 shadow-lg">
-              About UnfilteredMoney
-            </span>
+            
 
             {/* Main Heading */}
             <h1
@@ -296,31 +294,14 @@ const About = () => {
 
             {/* Subheading */}
             <p
-              className="text-lg md:text-xl lg:text-2xl text-gray/90 leading-relaxed max-w-3xl mx-auto mb-8"
+              className="text-lg md:text-xl lg:text-2xl text-gray-900 leading-relaxed max-w-3xl mx-auto mb-8"
               style={{ fontFamily: 'Lato, sans-serif' }}
             >
               In India, financial advice is often just a sales pitch in disguise. We're here to change that.
             </p>
 
             {/* Stats Row */}
-            <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-10">
-              {stats.map((stat, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 + idx * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-2xl md:text-3xl font-bold text-gray mb-1" style={{ fontFamily: 'Lato, sans-serif' }}>
-                    {stat.number}
-                  </div>
-                  <div className="text-sm md:text-base text-gray/80" style={{ fontFamily: 'Lato, sans-serif' }}>
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+           
           </motion.div>
         </div>
 
@@ -342,9 +323,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
-                <span className="text-2xl">📖</span>
-              </div>
+             
               <h2 className="text-2xl md:text-3xl font-bold text-neutral-900" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}>
                 Our Story
               </h2>
@@ -421,6 +400,56 @@ const About = () => {
         </div>
       </section>
 
+       {/* What Sets Us Apart - Enhanced */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-primary-600 via-primary-700 to-accent-600 text-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+        
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10 md:mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}>
+              What Sets Us Apart
+            </h2>
+            <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto" style={{ fontFamily: 'Lato, sans-serif' }}>
+              We combine deep industry knowledge with unwavering commitment to truth
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              { title: 'Experience', icon: '🎓', text: 'Deep understanding of the Indian financial system' },
+              { title: 'Expertise', icon: '✅', text: 'Fact-checked against IRDAI and SEBI circulars' },
+              { title: 'Trust', icon: '🔒', text: 'No product placements, no compromised advice' }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+                whileHover={{ y: -5 }}
+              >
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Lato, sans-serif' }}>
+                  {item.title}
+                </h3>
+                <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
+                  {item.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Team Section - Enhanced */}
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -486,55 +515,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* What Sets Us Apart - Enhanced */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-primary-600 via-primary-700 to-accent-600 text-white relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-        
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-10 md:mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}>
-              What Sets Us Apart
-            </h2>
-            <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto" style={{ fontFamily: 'Lato, sans-serif' }}>
-              We combine deep industry knowledge with unwavering commitment to truth
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {[
-              { title: 'Experience', icon: '🎓', text: 'Deep understanding of the Indian financial system' },
-              { title: 'Expertise', icon: '✅', text: 'Fact-checked against IRDAI and SEBI circulars' },
-              { title: 'Trust', icon: '🔒', text: 'No product placements, no compromised advice' }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-3" style={{ fontFamily: 'Lato, sans-serif' }}>
-                  {item.title}
-                </h3>
-                <p className="text-white/90 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
-                  {item.text}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
     </motion.div>
   );
 };

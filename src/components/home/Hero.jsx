@@ -128,9 +128,135 @@
 // export default Hero;
 
 
+// import { motion } from 'framer-motion';
+// import { Link } from 'react-router-dom';
+// import Button from '../ui/Button';
+
+// const Hero = () => {
+//   const containerVariants = {
+//     initial: {},
+//     animate: {
+//       transition: {
+//         staggerChildren: 0.12,
+//         delayChildren: 0.2,
+//       },
+//     },
+//   };
+
+//   const itemVariants = {
+//     initial: { opacity: 0, y: 15 },
+//     animate: { opacity: 1, y: 0 },
+//   };
+
+//   return (
+//     <section className="relative bg-neutral-900 pt-20 pb-10 md:pt-24 md:pb-12 overflow-hidden">
+//       {/* Dark Background Image */}
+//      <div className="absolute inset-0 z-0">
+//   <img
+//     src="/images/hero-bg.avif"
+//     alt="Financial background"
+//     className="w-full h-full object-cover"
+//     loading="eager"
+//   />
+
+//   {/* Soft light overlay for readability */}
+//   <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/20 to-white/30" />
+// </div>
+
+
+//       {/* Subtle Decorative Blurs */}
+//       <div className="absolute top-10 right-10 w-48 h-48 bg-primary-500/10 rounded-full blur-3xl" />
+//       <div className="absolute bottom-10 left-10 w-48 h-48 bg-accent-500/10 rounded-full blur-3xl" />
+
+//       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <motion.div
+//           className="text-center max-w-4xl mx-auto"
+//           variants={containerVariants}
+//           initial="initial"
+//           animate="animate"
+//         >
+//           {/* Badge */}
+//           <motion.div
+//             variants={itemVariants}
+//             transition={{ duration: 0.4 }}
+//           >
+//             <span className="inline-block mb-4 px-4 py-1.5 bg-white/10 backdrop-blur-sm text-white/90 rounded-full text-xs md:text-sm font-medium">
+//               🔍 Honest • Unbiased • India-Focused
+//             </span>
+//           </motion.div>
+
+//           {/* Heading */}
+//           <motion.h1
+//             variants={itemVariants}
+//             transition={{ duration: 0.5 }}
+//             className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-4 md:mb-5 leading-tight px-2"
+//             style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}
+//           >
+//             Financial Products Hide{' '}
+//             <span className="text-primary-400">Critical Fine Print</span>
+//             <br />
+//             <span className="text-white/80" style={{ fontWeight: 300 }}>
+//               We Help You See It Clearly
+//             </span>
+//           </motion.h1>
+
+//           {/* Description */}
+//           <motion.p
+//             variants={itemVariants}
+//             transition={{ duration: 0.5 }}
+//             className="text-base md:text-lg text-white mb-6 md:mb-7 leading-relaxed max-w-2xl mx-auto px-4"
+//             style={{ fontFamily: 'Lato, sans-serif' }}
+//           >
+//             Compare credit cards, insurance, and investments with{' '}
+//             <strong className="text-white">zero bias</strong>. Clear explanations, honest reviews.
+//           </motion.p>
+
+//           {/* CTAs */}
+//           <motion.div
+//             variants={itemVariants}
+//             transition={{ duration: 0.5 }}
+//             className="flex flex-col sm:flex-row gap-3 justify-center mb-6 md:mb-8 px-4"
+//           >
+//             <Link to="/credit-cards">
+//               <Button size="md" variant="primary" className="w-full sm:w-auto">
+//                 Explore Credit Cards
+//               </Button>
+//             </Link>
+//             <Link to="/tools">
+//               <Button size="md" variant="outline" className="w-full sm:w-auto bg-gray-500 backdrop-blur-sm text-white border-white/30 hover:bg-white/20">
+//                 Financial Tools
+//               </Button>
+//             </Link>
+//           </motion.div>
+
+//           {/* Trust Badges */}
+//           <motion.div
+//             variants={itemVariants}
+//             transition={{ duration: 0.5 }}
+//             className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm text-white/90"
+//           >
+//             <div className="flex items-center gap-1.5">
+//               <span>📊</span>
+//               <span>500+ Products</span>
+//             </div>
+//             <div className="flex items-center gap-1.5">
+//               <span>✓</span>
+//               <span>No Bias</span>
+//             </div>
+//             <div className="flex items-center gap-1.5">
+//               <span>🇮🇳</span>
+//               <span>India-First</span>
+//             </div>
+//           </motion.div>
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import Button from '../ui/Button';
 
 const Hero = () => {
   const containerVariants = {
@@ -149,105 +275,58 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-neutral-900 pt-20 pb-10 md:pt-24 md:pb-12 overflow-hidden">
-      {/* Dark Background Image */}
+    <section className="relative bg-neutral-900 pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden">
+      {/* Background Image & Overlay */}
      <div className="absolute inset-0 z-0">
   <img
     src="/images/hero-bg.avif"
     alt="Financial background"
-    className="w-full h-full object-cover"
+    className="w-full h-full object-cover opacity-80"
     loading="eager"
   />
 
-  {/* Soft light overlay for readability */}
-  <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/20 to-white/30" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-neutral-900/70" />
 </div>
 
 
-      {/* Subtle Decorative Blurs */}
-      <div className="absolute top-10 right-10 w-48 h-48 bg-primary-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-10 w-48 h-48 bg-accent-500/10 rounded-full blur-3xl" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-3xl mx-auto"
           variants={containerVariants}
           initial="initial"
           animate="animate"
         >
-          {/* Badge */}
-          <motion.div
-            variants={itemVariants}
-            transition={{ duration: 0.4 }}
-          >
-            <span className="inline-block mb-4 px-4 py-1.5 bg-white/10 backdrop-blur-sm text-white/90 rounded-full text-xs md:text-sm font-medium">
+          {/* Subtle Badge */}
+          <motion.div variants={itemVariants}>
+            <span className="inline-block mb-4 px-3 py-1 bg-white/10 backdrop-blur-sm text-white/80 rounded-full text-[11px] md:text-xs font-medium border border-white/5">
               🔍 Honest • Unbiased • India-Focused
             </span>
           </motion.div>
 
-          {/* Heading */}
+          {/* HEADING - Pehle se thoda bada lekin control mein */}
           <motion.h1
             variants={itemVariants}
-            transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-4 md:mb-5 leading-tight px-2"
-            style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}
-          >
-            Financial Products Hide{' '}
-            <span className="text-primary-400">Critical Fine Print</span>
-            <br />
-            <span className="text-white/80" style={{ fontWeight: 300 }}>
-              We Help You See It Clearly
-            </span>
-          </motion.h1>
-
-          {/* Description */}
-          <motion.p
-            variants={itemVariants}
-            transition={{ duration: 0.5 }}
-            className="text-base md:text-lg text-white mb-6 md:mb-7 leading-relaxed max-w-2xl mx-auto px-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight px-2"
             style={{ fontFamily: 'Lato, sans-serif' }}
           >
-            Compare credit cards, insurance, and investments with{' '}
-            <strong className="text-white">zero bias</strong>. Clear explanations, honest reviews.
+            Financial Products Hide <br />
+            <span className="text-primary-400">Critical Fine Print</span>
+          </motion.h1>
+
+          {/* SUBHEADING - Clean and Elegant */}
+          <motion.p
+            variants={itemVariants}
+            className="mt-4 text-sm md:text-xl text-white/70 font-normal tracking-wide italic"
+            style={{ fontFamily: 'Lato, sans-serif' }}
+          >
+            "We Help You See It Clearly"
           </motion.p>
-
-          {/* CTAs */}
-          <motion.div
+          
+          {/* Small Accent Line */}
+          <motion.div 
             variants={itemVariants}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center mb-6 md:mb-8 px-4"
-          >
-            <Link to="/credit-cards">
-              <Button size="md" variant="primary" className="w-full sm:w-auto">
-                Explore Credit Cards
-              </Button>
-            </Link>
-            <Link to="/tools">
-              <Button size="md" variant="outline" className="w-full sm:w-auto bg-gray-500 backdrop-blur-sm text-white border-white/30 hover:bg-white/20">
-                Financial Tools
-              </Button>
-            </Link>
-          </motion.div>
-
-          {/* Trust Badges */}
-          <motion.div
-            variants={itemVariants}
-            transition={{ duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm text-white/90"
-          >
-            <div className="flex items-center gap-1.5">
-              <span>📊</span>
-              <span>500+ Products</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span>✓</span>
-              <span>No Bias</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span>🇮🇳</span>
-              <span>India-First</span>
-            </div>
-          </motion.div>
+            className="mt-6 h-1 w-16 bg-primary-500 mx-auto rounded-full"
+          />
         </motion.div>
       </div>
     </section>
