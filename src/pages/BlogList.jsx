@@ -81,41 +81,54 @@ const BlogList = () => {
 
 
       {/* Category Filter - Cleaner, more premium */}
-      <motion.section
-        className="py-8 md:py-10 bg-white border-b border-neutral-100 sticky top-0 z-10 backdrop-blur-sm"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-auto">
-          <div className="flex flex-nowrap md:flex-wrap gap-3 justify-center md:justify-start pb-2 md:pb-0">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 border ${
-                selectedCategory === 'all'
-                  ? 'bg-primary-600 text-white border-primary-600 shadow-md'
-                  : 'bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300 hover:shadow-sm'
-              }`}
-            >
-              All Articles
-            </button>
+      {/* Category Filter */}
+<motion.section
+  className="
+    bg-white
+    border-b border-neutral-100
+    sticky
+    top-16
+    z-30
+    backdrop-blur-md
+  "
+  initial={{ opacity: 0, y: -10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.35 }}
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* horizontal scroll ONLY here */}
+    <div className="overflow-x-auto">
+      <div className="flex flex-nowrap md:flex-wrap gap-3 justify-start py-4">
+        <button
+          onClick={() => setSelectedCategory('all')}
+          className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 border ${
+            selectedCategory === 'all'
+              ? 'bg-primary-600 text-white border-primary-600 shadow-md'
+              : 'bg-white text-neutral-700 border-neutral-200 hover:border-neutral-300 hover:shadow-sm'
+          }`}
+        >
+          All Articles
+        </button>
 
-            {blogsData.categories.map((category) => (
-              <button
-                key={category.slug}
-                onClick={() => setSelectedCategory(category.slug)}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 border ${
-                  selectedCategory === category.slug
-                    ? 'bg-primary-600 text-white border-primary-600 shadow-md'
-                    : `${categoryColors[category.slug]} border-transparent`
-                }`}
-              >
-                {category.name} <span className="opacity-70">({category.count})</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+        {blogsData.categories.map((category) => (
+          <button
+            key={category.slug}
+            onClick={() => setSelectedCategory(category.slug)}
+            className={`px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 border ${
+              selectedCategory === category.slug
+                ? 'bg-primary-600 text-white border-primary-600 shadow-md'
+                : `${categoryColors[category.slug]} border-transparent`
+            }`}
+          >
+            {category.name}{' '}
+            <span className="opacity-70">({category.count})</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+</motion.section>
+
 
       {/* Blog Grid */}
       <motion.section

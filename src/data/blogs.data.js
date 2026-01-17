@@ -202,12 +202,12 @@ export const blogsData = {
       author: {
         name: 'Priya Sharma',
         bio: 'Ex-banker with 8+ years in credit card operations',
-        image: '/images/authors/priya.webp',
+        image: '/images/blog/lifetime-free.avif',
       },
       publishedDate: '2026-01-05',
       updatedDate: '2026-01-05',
       readTime: '7 min',
-      image: '/images/blog/lifetime-free-trap.webp',
+      image: '/images/blog/lifetime-free.avif',
       tags: ['credit cards', 'hidden fees', 'lifetime free', 'beginners'],
       excerpt:
         'Everyone loves "free", but most lifetime free cards quietly cost you through low rewards, high forex charges, and better alternatives you miss.',
