@@ -15,7 +15,7 @@ const WhyItMatters = ({ data }) => {
             <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-3" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}>
               {data.title}
             </h2>
-            <p className="text-neutral-700 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
+            <p className="text-neutral-700 leading-relaxed text-justify" style={{ fontFamily: 'Lato, sans-serif' }}>
               {data.description}
             </p>
           </motion.div>

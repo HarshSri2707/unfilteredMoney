@@ -53,7 +53,7 @@ const FAQ = ({ faqs }) => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 pb-4 text-sm text-neutral-700 leading-relaxed border-t border-neutral-200 pt-4" style={{ fontFamily: 'Lato, sans-serif' }}>
+                    <div className="px-5 pb-4 text-sm text-neutral-700 leading-relaxed border-t border-neutral-200 pt-4 text-justify" style={{ fontFamily: 'Lato, sans-serif' }}>
                       {faq.answer}
                     </div>
                   </motion.div>

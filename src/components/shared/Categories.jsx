@@ -59,7 +59,7 @@ const Categories = ({ categories, baseUrl }) => {
                     <h3 className="text-lg font-bold text-white mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
                       {category.name}
                     </h3>
-                    <p className="text-white/90 text-sm mb-3 leading-relaxed">
+                    <p className="text-white/90 text-sm mb-3 leading-relaxed text-justify">
                       {category.description}
                     </p>
                     <div className="flex items-center text-white font-semibold text-sm">

@@ -208,7 +208,7 @@ const BlogDetail = () => {
                         <h3 className="text-lg font-bold text-neutral-900 mb-2 line-clamp-2">
                           {post.title}
                         </h3>
-                        <p className="text-sm text-neutral-600 line-clamp-2">
+                        <p className="text-sm text-neutral-600 line-clamp-2 text-justify">
                           {post.excerpt}
                         </p>
                       </div>

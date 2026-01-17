@@ -98,7 +98,7 @@ const LatestBlogs = () => {
                       {blog.title}
                     </h3>
 
-                    <p className="text-sm text-neutral-600 mb-4 line-clamp-2">
+                    <p className="text-sm text-neutral-600 mb-4 line-clamp-2 text-justify">
                       {blog.excerpt}
                     </p>
 
@@ -109,7 +109,7 @@ const LatestBlogs = () => {
                             {blog.author.name.charAt(0)}
                           </span>
                         </div>
-                        <p className="text-xs font-medium text-neutral-700">
+                        <p className="text-xs font-medium text-neutral-700 ">
                           {blog.author.name}
                         </p>
                       </div>

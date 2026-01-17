@@ -167,7 +167,7 @@ const BlogList = () => {
                           {blog.title}
                         </h3>
 
-                        <p className="text-sm text-neutral-600 mb-6 line-clamp-3 flex-grow">
+                        <p className="text-sm text-neutral-600 mb-6 line-clamp-3 flex-grow text-justify">
                           {blog.excerpt}
                         </p>
 
@@ -243,7 +243,7 @@ const BlogList = () => {
                       <h3 className="text-xl font-bold text-neutral-900 mb-3">
                         {category.name}
                       </h3>
-                      <p className="text-neutral-600 mb-4 text-sm leading-relaxed">
+                      <p className="text-neutral-600 mb-4 text-sm leading-relaxed text-justify">
                         {category.description}
                       </p>
                       <p className="text-sm font-semibold text-primary-600">

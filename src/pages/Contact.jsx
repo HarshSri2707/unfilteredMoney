@@ -84,17 +84,19 @@ const Contact = () => {
       {/* Hero Section - Enhanced */}
       <section className="relative pt-20 md:pt-24 pb-16 overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-accent-600">
         {/* Animated background elements */}
-     <div className="absolute inset-0 overflow-hidden">
+  <div className="absolute inset-0 overflow-hidden">
   <img
     src="/images/contact.avif"
     alt=""
-    className="w-full h-full object-cover"
+    className="w-full h-full object-cover blur-sm"
     loading="lazy"
   />
 
-  {/* Optional very light overlay (remove if not needed) */}
-  <div className="absolute inset-0 bg-white/10" />
+  {/* PRO OVERLAY */}
+  <div className="absolute inset-0 bg-gradient-to-b 
+    from-black/60 via-black/45 to-black/60" />
 </div>
+
 
 
 
@@ -105,7 +107,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
-            <span className="inline-block px-4 py-2 bg-gray/60 backdrop-blur-sm text-black rounded-full text-sm font-semibold mb-6 shadow-lg">
+            <span className="inline-block px-4 py-2 bg-white/80 text-neutral-900 backdrop-blur-sm  rounded-full text-sm font-semibold mb-6 shadow-lg">
               💬 Get in Touch
             </span>
 
@@ -119,7 +121,7 @@ const Contact = () => {
 
             {/* Subheading */}
             <p
-              className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-8 leading-relaxed"
+              className="text-lg md:text-2xl text-white max-w-2xl mx-auto mb-8 leading-relaxed"
               style={{ fontFamily: 'Lato, sans-serif' }}
             >
               Whether you need expert advice or have feedback, our team is ready to assist you.
@@ -154,7 +156,7 @@ const Contact = () => {
                   <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}>
                     Send Us a Message
                   </h2>
-                  <p className="text-neutral-600" style={{ fontFamily: 'Lato, sans-serif' }}>
+                  <p className="text-neutral-600 text-justify" style={{ fontFamily: 'Lato, sans-serif' }}>
                     Fill out the form and we'll respond within 24 hours
                   </p>
                 </div>
@@ -341,7 +343,7 @@ const Contact = () => {
                       <h3 className="text-base md:text-lg font-bold text-neutral-900 mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
                         {faq.q}
                       </h3>
-                      <p className="text-sm md:text-base text-neutral-600 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
+                      <p className="text-sm md:text-base text-neutral-600 leading-relaxed text-justify" style={{ fontFamily: 'Lato, sans-serif' }}>
                         {faq.a}
                       </p>
                     </div>
@@ -355,7 +357,7 @@ const Contact = () => {
               <h3 className="text-xl md:text-2xl font-bold mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
                 Still Have Questions?
               </h3>
-              <p className="text-white/90 mb-6" style={{ fontFamily: 'Lato, sans-serif' }}>
+              <p className="text-white/90 mb-6 text-justify" style={{ fontFamily: 'Lato, sans-serif' }}>
                 Don't hesitate to reach out. We're always happy to help!
               </p>
               <a
