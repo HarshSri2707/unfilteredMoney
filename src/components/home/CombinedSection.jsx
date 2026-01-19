@@ -298,7 +298,7 @@ const CombinedSection = () => {
       {/* Top Picks - Integrated Image Design */}
       {/* Top Picks - CLEAN & CONSISTENT */}
       <section className="py-8 md:py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-5 md:mb-6">
             <motion.h2
               className="text-2xl md:text-3xl font-bold text-neutral-900 mb-1"
