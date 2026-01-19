@@ -22,6 +22,14 @@ const FAQ = () => {
       question: 'Is your advice specific to India?',
       answer: 'Absolutely. Every review considers Indian tax laws, IRDAI & SEBI regulations, and INR calculations.',
     },
+     {
+      question: 'Are your recommendations truly unbiased?',
+      answer: 'Yes. We do not accept payment for rankings. Our team analyzes products based on merit, fees, and features.',
+    },
+    {
+      question: 'Do I need to pay to use UnfilteredMoney?',
+      answer: 'No. All our content, reviews, and calculators are 100% free. No sign-up required.',
+    },
   ];
 
   return (

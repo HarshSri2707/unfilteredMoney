@@ -14,7 +14,7 @@ const FAQ = ({ faqs }) => {
           viewport={{ once: true }}
           style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}
         >
-          Common Questions
+          Frequently Asked Questions
         </motion.h2>
 
         <div className="space-y-3">

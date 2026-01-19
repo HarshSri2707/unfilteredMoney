@@ -9,7 +9,7 @@ const Hero = ({ data }) => {
           <img
             src={data.backgroundImage}
             alt="Hero background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover blur-sm"
             style={{ objectPosition: 'center 40%' }}
           />
           {/* Dark overlay for readability */}

@@ -3,85 +3,187 @@ export const investmentsData = {
     {
       id: 'parag-parikh-flexi',
       name: 'Parag Parikh Flexi Cap Fund',
+      category: 'Mutual Funds',
+      image: '/picks/parag-fund.webp',
       type: 'mutual-fund',
-      category: 'Flexi Cap',
-      image: '/images/investments/ppfas.webp',
-      rating: 4.7,
-      returns: {
-        '1yr': '28.5%',
-        '3yr': '22.3%',
-        '5yr': '19.8%',
-      },
-      expenseRatio: '0.67%',
-      minSIP: '₹1,000',
+      rating: '4.9',
+      returns: '15.2% (5Y)',
+      expenseRatio: '0.78%',
       pros: [
         'International equity exposure (up to 35%)',
-        'Value-focused investment approach',
-        'Consistent long-term performance',
+        'Long-term wealth creation track record',
+        'Low expense ratio compared to peers',
+        'Consistent performance across market cycles'
       ],
       cons: [
         'Higher volatility due to international exposure',
-        'May underperform in pure bull markets',
+        'Not suitable for short-term investors'
       ],
-      bestFor: 'Long-term investors seeking diversification',
+      bestFor: 'Long-term investors seeking diversified exposure',
+      featured: true
     },
     {
-      id: 'nifty-50-index',
-      name: 'Nifty 50 Index Funds',
-      type: 'mutual-fund',
-      category: 'Index Fund',
-      image: '/images/investments/nifty50.webp',
-      rating: 4.5,
-      returns: {
-        '1yr': '25.2%',
-        '3yr': '18.7%',
-        '5yr': '16.4%',
-      },
-      expenseRatio: '0.10%',
-      minSIP: '₹100',
+      id: 'nps-tier-1',
+      name: 'National Pension System (NPS)',
+      category: 'Pension Plans',
+      image: 'https://www.legalraasta.com/blog/wp-content/uploads/2021/10/nps-tier-1.png',
+      type: 'pension',
+      rating: '4.7',
+      returns: '10-12% (historical)',
+      expenseRatio: '0.09%',
       pros: [
-        'Ultra-low expense ratio',
-        'Tracks market performance exactly',
-        'Best for passive investors',
+        'Lowest expense ratio among all investments',
+        'Tax benefits under 80C & 80CCD(1B)',
+        'Government-backed security',
+        'Flexible investment options'
       ],
       cons: [
-        'No chance of outperforming the market',
-        'Concentrated in top 50 companies only',
+        'Lock-in until retirement (60 years)',
+        'Mandatory annuity purchase (40%)'
       ],
-      bestFor: 'Passive investors and beginners',
+      bestFor: 'Salaried individuals planning for retirement',
+      featured: true
     },
+    {
+      id: 'axis-small-cap',
+      name: 'Axis Small Cap Fund',
+      category: 'Mutual Funds',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx7TnMOp8HVSWPKWakNTfCgxVNOmGRN5q9VA&s',
+      type: 'mutual-fund',
+      rating: '4.6',
+      returns: '18.5% (5Y)',
+      expenseRatio: '0.95%',
+      pros: [
+        'High growth potential from small-cap stocks',
+        'Strong research-driven stock selection',
+        'Good risk-adjusted returns',
+        'Experienced fund management team'
+      ],
+      cons: [
+        'High volatility and risk',
+        'Not suitable for conservative investors'
+      ],
+      bestFor: 'Aggressive investors with 7+ year horizon',
+      featured: true
+    }
   ],
-  
+
+  allInvestments: [
+    {
+      id: 'parag-parikh-flexi',
+      name: 'Parag Parikh Flexi Cap',
+      category: 'Mutual Funds',
+      image: '/picks/parag-fund.webp',
+      type: 'mutual-fund',
+      rating: '4.9',
+      returns: '15.2% (5Y)',
+      bestFor: 'Long-term investors',
+      featured: true
+    },
+    {
+      id: 'nps-tier-1',
+      name: 'NPS Tier 1',
+      category: 'Pension Plans',
+      image: 'https://www.legalraasta.com/blog/wp-content/uploads/2021/10/nps-tier-1.png',
+      type: 'pension',
+      rating: '4.7',
+      returns: '10-12%',
+      bestFor: 'Retirement planning',
+      featured: true
+    },
+    {
+      id: 'axis-small-cap',
+      name: 'Axis Small Cap Fund',
+      category: 'Mutual Funds',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx7TnMOp8HVSWPKWakNTfCgxVNOmGRN5q9VA&s',
+      type: 'mutual-fund',
+      rating: '4.6',
+      returns: '18.5% (5Y)',
+      bestFor: 'Aggressive investors',
+      featured: true
+    },
+    {
+      id: 'ppf',
+      name: 'Public Provident Fund',
+      category: 'Fixed Income',
+      image: '/images/investments/ppf.jpg',
+      type: 'fixed-income',
+      rating: '4.5',
+      returns: '7.1% (fixed)',
+      bestFor: 'Safe, tax-free returns',
+      featured: false
+    },
+    {
+      id: 'gold-etf',
+      name: 'SBI Gold ETF',
+      category: 'Gold Investment',
+      image: '/images/investments/gold-etf.jpg',
+      type: 'etf',
+      rating: '4.3',
+      returns: '12.8% (5Y)',
+      bestFor: 'Portfolio diversification',
+      featured: false
+    },
+    {
+      id: 'index-fund',
+      name: 'UTI Nifty 50 Index Fund',
+      category: 'Index Funds',
+      image: '/images/investments/index-fund.jpg',
+      type: 'mutual-fund',
+      rating: '4.4',
+      returns: '13.2% (5Y)',
+      bestFor: 'Passive investors',
+      featured: false
+    }
+  ],
+
   categories: [
     {
+      id: 'mutual-funds',
       slug: 'mutual-funds',
       name: 'Mutual Funds',
-      description: 'SIP recommendations and fund analysis',
+      description: 'Professionally managed equity & debt funds',
+      icon: '📊'
     },
     {
-      slug: 'stocks',
-      name: 'Stock Market',
-      description: 'Stock analysis and investment strategies',
-    },
-    {
+      id: 'fixed-income',
       slug: 'fixed-income',
       name: 'Fixed Income',
-      description: 'FDs, Bonds, and debt instruments',
+      description: 'Safe, guaranteed return investments',
+      icon: '🏦'
     },
+    {
+      id: 'stocks',
+      slug: 'stocks',
+      name: 'Stocks & ETFs',
+      description: 'Direct equity and exchange-traded funds',
+      icon: '📈'
+    },
+    {
+      id: 'retirement',
+      slug: 'retirement',
+      name: 'Retirement Plans',
+      description: 'NPS, PPF, and pension schemes',
+      icon: '🎯'
+    }
   ],
-  
+
   faqData: [
     {
-      question: 'What is the difference between SIP and lump sum?',
-      answer: 'SIP (Systematic Investment Plan) invests a fixed amount monthly, averaging out market volatility. Lump sum invests everything at once. SIP is better for salaried individuals.',
-    },
-    {
-      question: 'Should I invest in direct or regular mutual funds?',
-      answer: 'Always choose Direct plans. They have lower expense ratios (0.5-1% less) because there\'s no distributor commission. Over 20 years, this saves lakhs.',
+      question: 'What is the difference between direct and regular mutual funds?',
+      answer: 'Direct plans have no distributor commission, resulting in lower expense ratios (0.5-1% less). Over 20 years, this can result in ₹10-15 lakh higher corpus on a ₹10 lakh investment. Always choose direct plans when investing online.'
     },
     {
       question: 'How much should I invest in equity vs debt?',
-      answer: 'A common rule: 100 minus your age = equity allocation. So at 30, keep 70% in equity, 30% in debt. Adjust based on risk appetite and goals.',
+      answer: 'A common rule is: Equity allocation = 100 - your age. So if you\'re 30, keep 70% in equity and 30% in debt. Adjust based on risk appetite and financial goals. Review annually.'
     },
-  ],
+    {
+      question: 'Is NPS better than PPF for retirement?',
+      answer: 'NPS offers higher returns (10-12%) but has lock-in until 60. PPF gives lower but guaranteed returns (7.1%) with 15-year maturity. NPS wins for long-term wealth, PPF for safety and liquidity after 5 years.'
+    },
+    {
+      question: 'Should I invest in small-cap or large-cap funds?',
+      answer: 'Large-cap funds are stable, suitable for conservative investors. Small-cap funds offer higher returns but with more volatility. Ideal portfolio: 60% large-cap, 30% mid-cap, 10% small-cap for balanced growth.'
+    }
+  ]
 };

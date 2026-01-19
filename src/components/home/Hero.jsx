@@ -41,11 +41,7 @@ const Hero = () => {
           animate="animate"
         >
           {/* Subtle Badge */}
-          <motion.div variants={itemVariants}>
-            <span className="inline-block mb-4 px-3 py-1 bg-white/10 backdrop-blur-sm text-white/80 rounded-full text-[11px] md:text-xs font-medium border border-white/5">
-              🔍 Honest • Unbiased • India-Focused
-            </span>
-          </motion.div>
+       
 
           {/* HEADING - Pehle se thoda bada lekin control mein */}
           <motion.h1

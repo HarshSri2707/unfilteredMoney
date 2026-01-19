@@ -225,10 +225,7 @@ const Footer = () => {
             <p className="text-sm text-neutral-400">
               © {currentYear} UnfilteredMoney. All rights reserved.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-xs text-neutral-400">
-              <span>🔒 SSL Secure</span>
-              <span>✓ 100% Verified</span>
-            </div>
+           
           </div>
           <p className="text-xs text-neutral-500 mt-4 text-center">
             Disclaimer: UnfilteredMoney is an educational initiative. Financial decisions carry risks. Please consult with a professional before investing.

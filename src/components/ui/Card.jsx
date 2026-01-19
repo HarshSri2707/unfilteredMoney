@@ -39,7 +39,7 @@ const Card = ({
     <motion.div
       className={baseClasses}
       onClick={onClick}
-      {...hoverAnimation}
+      
       style={{
         willChange: 'transform',
         cursor: onClick ? 'pointer' : 'default',

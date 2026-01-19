@@ -4,6 +4,7 @@ import { animationConfig } from '../config/animation.config';
 import { seoConfig } from '../config/seo.config';
 import Seo from '../components/ui/Seo';
 import Button from '../components/ui/Button';
+import { AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,6 +33,13 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+const toggleFaq = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
+
 
   const contactInfo = [
     {
@@ -305,71 +313,87 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section - Accordion Style */}
-      <section className="py-12 md:py-16 bg-neutral-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+   <section className="py-10 bg-neutral-50">
+  <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.h2
+      className="text-2xl md:text-3xl font-bold text-neutral-900 mb-6 text-center"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}
+    >
+      Frequently Asked Questions
+    </motion.h2>
+
+    <div className="space-y-3">
+      {faqs.map((faq, index) => {
+        const isOpen = openIndex === index;
+
+        return (
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3, delay: index * 0.05 }}
+            className="bg-white rounded-xl border-2 border-neutral-200 overflow-hidden"
           >
-            <div className="text-center mb-10">
-              <span className="inline-block px-4 py-2 bg-primary-50 rounded-full text-sm font-semibold text-primary-700 mb-4">
-                FAQ
+            {/* QUESTION */}
+            <button
+              onClick={() => toggleFaq(index)}
+              className="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-neutral-50 transition-colors"
+            >
+              <span
+                className="text-base font-bold text-neutral-900 pr-4"
+                style={{ fontFamily: 'Lato, sans-serif' }}
+              >
+                {faq.q}
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}>
-                Frequently Asked Questions
-              </h2>
-              <p className="text-neutral-600" style={{ fontFamily: 'Lato, sans-serif' }}>
-                Quick answers to common queries
-              </p>
-            </div>
 
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
+              <motion.svg
+                className="w-5 h-5 text-primary-600 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.25 }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </motion.svg>
+            </button>
+
+            {/* ANSWER */}
+            <AnimatePresence initial={false}>
+              {isOpen && (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-6 border-2 border-neutral-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  className="overflow-hidden"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary-600 font-bold">Q</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-base md:text-lg font-bold text-neutral-900 mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
-                        {faq.q}
-                      </h3>
-                      <p className="text-sm md:text-base text-neutral-600 leading-relaxed text-justify" style={{ fontFamily: 'Lato, sans-serif' }}>
-                        {faq.a}
-                      </p>
-                    </div>
+                  <div
+                    className="px-5 pb-4 pt-4 border-t border-neutral-200 text-sm text-neutral-700 leading-relaxed text-justify"
+                    style={{ fontFamily: 'Lato, sans-serif' }}
+                  >
+                    {faq.a}
                   </div>
                 </motion.div>
-              ))}
-            </div>
-
-            {/* CTA Box */}
-            <div className="mt-10 bg-gradient-to-br from-primary-600 to-accent-600 rounded-2xl p-8 text-center text-white">
-              <h3 className="text-xl md:text-2xl font-bold mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
-                Still Have Questions?
-              </h3>
-              <p className="text-white/90 mb-6 text-justify" style={{ fontFamily: 'Lato, sans-serif' }}>
-                Don't hesitate to reach out. We're always happy to help!
-              </p>
-              <a
-                href="mailto:hello@unfilteredmoney.com"
-                className="inline-block bg-white text-primary-600 px-8 py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                Email Us Now →
-              </a>
-            </div>
+              )}
+            </AnimatePresence>
           </motion.div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+
     </motion.div>
   );
 };

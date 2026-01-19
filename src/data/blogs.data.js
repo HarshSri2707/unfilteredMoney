@@ -260,7 +260,7 @@ export const blogsData = {
       publishedDate: '2026-01-10',
       updatedDate: '2026-01-10',
       readTime: '10 min',
-      image: '/images/blog/tax-regime.webp',
+      image: 'https://www.cabkgoyal.com/wp-content/uploads/2024/07/old-vs-new-tax-regime-1024x576.jpg',
       tags: ['taxation', 'tax planning', 'budget 2025', 'salary'],
       excerpt:
         'New regime now gives ₹12 lakh tax-free. But old regime can still win if you have big deductions. Calculator inside.',

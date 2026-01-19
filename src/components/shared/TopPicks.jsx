@@ -131,7 +131,7 @@ const TopPicks = ({ picks, type }) => {
               className="text-2xl md:text-3xl font-bold text-neutral-900"
               style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}
             >
-              Editor's Top Picks
+               Top Picks
             </h2>
           </div>
           <p className="text-neutral-600 ml-7" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -158,7 +158,7 @@ const TopPicks = ({ picks, type }) => {
                   <img
                     src={pick.image}
                     alt={pick.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain-cover"
                     loading="lazy"
                   />
 

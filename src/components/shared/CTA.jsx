@@ -18,7 +18,7 @@ const CTA = ({ data }) => {
             {data.description}
           </p>
           <Link
-            to={data.buttonLink}
+            to='/contact'
             className="inline-block bg-white text-primary-600 px-8 py-3 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105"
           >
             {data.buttonText} →
