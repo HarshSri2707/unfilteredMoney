@@ -51,7 +51,7 @@ const Navbar = () => {
       dropdown: [
         { name: 'Term Life Insurance', path: '/insurance/term-life' },
         { name: 'Health Insurance', path: '/insurance/health' },
-        { name: 'Motor Insurance', path: '/insurance/motor' },
+        { name: 'Motor Insurance', path: '/insurance/vehicle' },
       ],
     },
     {

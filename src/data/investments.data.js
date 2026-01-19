@@ -72,7 +72,7 @@ export const investmentsData = {
     {
       id: 'parag-parikh-flexi',
       name: 'Parag Parikh Flexi Cap',
-      category: 'Mutual Funds',
+      category: 'mutual-funds',
       image: '/picks/parag-fund.webp',
       type: 'mutual-fund',
       rating: '4.9',
@@ -83,7 +83,7 @@ export const investmentsData = {
     {
       id: 'nps-tier-1',
       name: 'NPS Tier 1',
-      category: 'Pension Plans',
+      category: 'retirement',
       image: 'https://www.legalraasta.com/blog/wp-content/uploads/2021/10/nps-tier-1.png',
       type: 'pension',
       rating: '4.7',
@@ -94,7 +94,7 @@ export const investmentsData = {
     {
       id: 'axis-small-cap',
       name: 'Axis Small Cap Fund',
-      category: 'Mutual Funds',
+      category: 'mutual-funds',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx7TnMOp8HVSWPKWakNTfCgxVNOmGRN5q9VA&s',
       type: 'mutual-fund',
       rating: '4.6',
@@ -105,7 +105,7 @@ export const investmentsData = {
     {
       id: 'ppf',
       name: 'Public Provident Fund',
-      category: 'Fixed Income',
+      category: 'fixed-income',
       image: '/images/investments/ppf.jpg',
       type: 'fixed-income',
       rating: '4.5',
@@ -116,7 +116,7 @@ export const investmentsData = {
     {
       id: 'gold-etf',
       name: 'SBI Gold ETF',
-      category: 'Gold Investment',
+      category: 'stocks',
       image: '/images/investments/gold-etf.jpg',
       type: 'etf',
       rating: '4.3',
@@ -127,7 +127,7 @@ export const investmentsData = {
     {
       id: 'index-fund',
       name: 'UTI Nifty 50 Index Fund',
-      category: 'Index Funds',
+      category: 'mutual-funds',
       image: '/images/investments/index-fund.jpg',
       type: 'mutual-fund',
       rating: '4.4',
