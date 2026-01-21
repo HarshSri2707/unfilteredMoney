@@ -595,49 +595,10 @@ const BlogList = () => {
       />
 
       {/* Hero Section */}
-      <motion.section
-        className="relative pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden"
-        {...animationConfig.sectionReveal}
-      >
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/blogBanner.webp"
-            alt="Financial background"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          {/* soft overlay for readability */}
-          <div className="absolute inset-0 bg-white/70" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-5 md:mb-6 leading-tight">
-              The Financial Friend Who Tells You The Ugly Truth
-            </h1>
-
-            <p className="text-lg md:text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
-              No sponsored lists. No hidden agendas.
-              <br />
-              We read the fine print so you don't get fooled — again.
-            </p>
-
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <span className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-medium text-neutral-700 border border-neutral-200 shadow-sm">
-                100% Unbiased
-              </span>
-              <span className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-medium text-neutral-700 border border-neutral-200 shadow-sm">
-                Fine Print Decoded
-              </span>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+    
 
       {/* Top Picks Section */}
-      <section className="py-12 bg-gradient-to-b from-neutral-50 to-white border-b border-neutral-200">
+      <section className="py-12 pt-24 bg-gradient-to-b from-neutral-50 to-white border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
