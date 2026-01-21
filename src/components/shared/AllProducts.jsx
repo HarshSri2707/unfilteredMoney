@@ -183,7 +183,7 @@ const AllProducts = ({
 
   return (
     <section className="py-10 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
           <motion.h2
             className="text-2xl md:text-3xl font-bold text-neutral-900"
