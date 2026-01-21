@@ -609,11 +609,80 @@ const BlogList = () => {
                 Editor's choice articles you shouldn't miss
               </p>
             </div>
-            <div className="hidden md:block">
-              <span className="inline-flex items-center px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full text-sm font-semibold">
-                ⭐ Featured
-              </span>
-            </div>
+           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                {/* Search Bar */}
+                <div className="relative w-full sm:w-80">
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-4 pr-12 py-3 border-2 border-neutral-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors"
+                    style={{ fontFamily: 'Lato, sans-serif' }}
+                  />
+                  <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-neutral-600 hover:text-primary-600 transition-colors">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </button>
+                </div>
+
+                {/* Browse by Category Dropdown */}
+                <div 
+                  ref={dropdownRef}
+                  className="relative"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <button
+                    className="w-full sm:w-auto px-5 py-3 bg-neutral-100 text-neutral-900 rounded-lg font-medium hover:bg-neutral-200 transition-colors flex items-center justify-between sm:justify-center gap-2 whitespace-nowrap"
+                    onClick={() => setIsCategoryOpen(!isCategoryOpen)}
+                  >
+                    <span>Browse by Category</span>
+                    <svg className={`w-4 h-4 transition-transform duration-200 ${isCategoryOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  <div 
+                    className={`absolute right-0 mt-2 w-64 bg-white rounded-xl border border-neutral-200 shadow-xl py-2 z-50 transition-all duration-200 origin-top-right ${
+                      isCategoryOpen 
+                        ? 'opacity-100 scale-100 visible' 
+                        : 'opacity-0 scale-95 invisible pointer-events-none'
+                    }`}
+                  >
+                    <div className="py-1">
+                      <button
+                        onClick={() => handleCategorySelect('all')}
+                        className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${
+                          selectedCategory === 'all'
+                            ? 'bg-primary-50 text-primary-700'
+                            : 'text-neutral-700 hover:bg-neutral-50'
+                        }`}
+                      >
+                        All Articles
+                      </button>
+                    </div>
+
+                    <div className="border-t border-neutral-100 my-1" />
+
+                    {blogsData.categories.map((cat) => (
+                      <button
+                        key={cat.slug}
+                        onClick={() => handleCategorySelect(cat.slug)}
+                        className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${
+                          selectedCategory === cat.slug
+                            ? 'bg-neutral-100 text-neutral-900'
+                            : 'text-neutral-700 hover:bg-neutral-50'
+                        }`}
+                      >
+                        {cat.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -714,80 +783,7 @@ const BlogList = () => {
               </div>
 
               {/* Search + Category Filter */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                {/* Search Bar */}
-                <div className="relative w-full sm:w-80">
-                  <input
-                    type="text"
-                    placeholder="Search articles..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-4 pr-12 py-3 border-2 border-neutral-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors"
-                    style={{ fontFamily: 'Lato, sans-serif' }}
-                  />
-                  <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-neutral-600 hover:text-primary-600 transition-colors">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* Browse by Category Dropdown */}
-                <div 
-                  ref={dropdownRef}
-                  className="relative"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <button
-                    className="w-full sm:w-auto px-5 py-3 bg-neutral-100 text-neutral-900 rounded-lg font-medium hover:bg-neutral-200 transition-colors flex items-center justify-between sm:justify-center gap-2 whitespace-nowrap"
-                    onClick={() => setIsCategoryOpen(!isCategoryOpen)}
-                  >
-                    <span>Browse by Category</span>
-                    <svg className={`w-4 h-4 transition-transform duration-200 ${isCategoryOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-
-                  {/* Dropdown Menu */}
-                  <div 
-                    className={`absolute right-0 mt-2 w-64 bg-white rounded-xl border border-neutral-200 shadow-xl py-2 z-50 transition-all duration-200 origin-top-right ${
-                      isCategoryOpen 
-                        ? 'opacity-100 scale-100 visible' 
-                        : 'opacity-0 scale-95 invisible pointer-events-none'
-                    }`}
-                  >
-                    <div className="py-1">
-                      <button
-                        onClick={() => handleCategorySelect('all')}
-                        className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${
-                          selectedCategory === 'all'
-                            ? 'bg-primary-50 text-primary-700'
-                            : 'text-neutral-700 hover:bg-neutral-50'
-                        }`}
-                      >
-                        All Articles
-                      </button>
-                    </div>
-
-                    <div className="border-t border-neutral-100 my-1" />
-
-                    {blogsData.categories.map((cat) => (
-                      <button
-                        key={cat.slug}
-                        onClick={() => handleCategorySelect(cat.slug)}
-                        className={`w-full text-left px-4 py-2.5 text-sm font-medium transition-colors ${
-                          selectedCategory === cat.slug
-                            ? 'bg-neutral-100 text-neutral-900'
-                            : 'text-neutral-700 hover:bg-neutral-50'
-                        }`}
-                      >
-                        {cat.name}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
 
