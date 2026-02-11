@@ -1,272 +1,3 @@
-
-
-
-// export const blogsData = {
-//   topPicks: [
-//     {
-//       id: 'lifetime-free-card-cost',
-//       slug: 'why-lifetime-free-card-costs-5000',
-//       title: 'Why Your "Lifetime Free" Card Might Actually Cost You ₹5,000+ Every Year',
-//       metaDescription:
-//         'Unfiltered truth: Hidden forex markups, poor reward rates, and missed opportunities make most lifetime free cards expensive traps in 2026.',
-//       category: 'credit-cards',
-//       author: {
-//         name: 'Priya Sharma',
-//         bio: 'Ex-banker with 8+ years in credit card operations',
-//         image: '/images/blog/lifetime-free.avif',
-//       },
-//       publishedDate: '2026-01-05',
-//       updatedDate: '2026-01-05',
-//       readTime: '7 min',
-//       image: '/images/blog/lifetime-free.avif',
-//       tags: ['credit cards', 'hidden fees', 'lifetime free', 'beginners'],
-//       excerpt:
-//         'Everyone loves "free", but most lifetime free cards quietly cost you through low rewards, high forex charges, and better alternatives you miss.',
-//       featured: true,
-//     },
-//     {
-//       id: 'tax-regime-2026',
-//       slug: 'old-vs-new-tax-regime-2026',
-//       title: 'Old vs New Tax Regime FY 2025-26: Which Saves You More After Budget 2025 Changes?',
-//       metaDescription:
-//         'Updated comparison with new slabs, ₹12 lakh tax-free limit, standard deduction hike — plus real examples for salaried Indians.',
-//       category: 'personal-finance',
-//       author: {
-//         name: 'Amit Verma',
-//         bio: 'Tax consultant & financial writer',
-//         image: '/images/authors/amit.webp',
-//       },
-//       publishedDate: '2026-01-10',
-//       updatedDate: '2026-01-10',
-//       readTime: '10 min',
-//       image: 'https://www.cabkgoyal.com/wp-content/uploads/2024/07/old-vs-new-tax-regime-1024x576.jpg',
-//       tags: ['taxation', 'tax planning', 'budget 2025', 'salary'],
-//       excerpt:
-//         'New regime now gives ₹12 lakh tax-free. But old regime can still win if you have big deductions. Calculator inside.',
-//       featured: true,
-//     },
-//     {
-//       id: 'zero-forex-guide-2026',
-//       slug: 'best-zero-forex-markup-credit-cards-india-2026',
-//       title: 'Best Zero Forex Markup Credit Cards in India – 2026 Honest Guide',
-//       metaDescription:
-//         'Travel or shop abroad without losing 3.5%? Top zero markup cards like Scapia, IDFC WOW, Ixigo — with pros, cons & traps.',
-//       category: 'credit-cards',
-//       author: {
-//         name: 'Priya Sharma',
-//         bio: 'Ex-banker with 8+ years in credit card operations',
-//         image: '/images/authors/priya.webp',
-//       },
-//       publishedDate: '2026-01-12',
-//       updatedDate: '2026-01-12',
-//       readTime: '8 min',
-//       image: '/images/blog/zero-forex-2026.webp',
-//       tags: ['credit cards', 'travel', 'forex', 'rewards'],
-//       excerpt:
-//         'Forex markup silently kills your travel budget. Here are the real zero-markup winners (and ones to avoid) in 2026.',
-//       featured: true,
-//     },
-//   ],
-
-//   featured: [
-//     {
-//       id: 'zero-forex-guide-2026',
-//       slug: 'best-zero-forex-markup-credit-cards-india-2026',
-//       title: 'Best Zero Forex Markup Credit Cards in India – 2026 Honest Guide',
-//       metaDescription:
-//         'Travel or shop abroad without losing 3.5%? Top zero markup cards like Scapia, IDFC WOW, Ixigo — with pros, cons & traps.',
-//       category: 'credit-cards',
-//       author: {
-//         name: 'Priya Sharma',
-//         bio: 'Ex-banker with 8+ years in credit card operations',
-//         image: '/images/authors/priya.webp',
-//       },
-//       publishedDate: '2026-01-12',
-//       updatedDate: '2026-01-12',
-//       readTime: '8 min',
-//       image: '/images/blog/zero-forex-2026.webp',
-//       tags: ['credit cards', 'travel', 'forex', 'rewards'],
-//       excerpt:
-//         'Forex markup silently kills your travel budget. Here are the real zero-markup winners (and ones to avoid) in 2026.',
-//       featured: true,
-//     },
-//     {
-//       id: 'tax-regime-2026',
-//       slug: 'old-vs-new-tax-regime-2026',
-//       title: 'Old vs New Tax Regime FY 2025-26: Which Saves You More After Budget 2025 Changes?',
-//       metaDescription:
-//         'Updated comparison with new slabs, ₹12 lakh tax-free limit, standard deduction hike — plus real examples for salaried Indians.',
-//       category: 'personal-finance',
-//       author: {
-//         name: 'Amit Verma',
-//         bio: 'Tax consultant & financial writer',
-//         image: '/images/authors/amit.webp',
-//       },
-//       publishedDate: '2026-01-10',
-//       updatedDate: '2026-01-10',
-//       readTime: '10 min',
-//       image: 'https://www.cabkgoyal.com/wp-content/uploads/2024/07/old-vs-new-tax-regime-1024x576.jpg',
-//       tags: ['taxation', 'tax planning', 'budget 2025', 'salary'],
-//       excerpt:
-//         'New regime now gives ₹12 lakh tax-free. But old regime can still win if you have big deductions. Calculator inside.',
-//       featured: true,
-//     },
-//     {
-//       id: 'best-sip-2026',
-//       slug: 'best-mutual-fund-sips-india-2026',
-//       title: 'Best Mutual Fund SIPs to Start in 2026 – Long-Term Wealth Builders',
-//       metaDescription:
-//         'Top equity, flexi-cap & mid-cap funds for SIP in current market — expected 12–15%+ returns with honest risk warning.',
-//       category: 'investments',
-//       author: {
-//         name: 'Sneha Reddy',
-//         bio: 'Personal finance educator',
-//         image: '/images/authors/sneha.webp',
-//       },
-//       publishedDate: '2026-01-08',
-//       updatedDate: '2026-01-08',
-//       readTime: '9 min',
-//       image: '/images/blog/sip-2026.webp',
-//       tags: ['investments', 'mutual funds', 'sip', 'long-term'],
-//       excerpt:
-//         'Markets volatile? Here are solid SIP choices for 10+ year horizon — with no sugar-coating.',
-//       featured: true,
-//     },
-//     {
-//       id: 'lifetime-free-card-cost',
-//       slug: 'why-lifetime-free-card-costs-5000',
-//       title: 'Why Your "Lifetime Free" Card Might Actually Cost You ₹5,000+ Every Year',
-//       metaDescription:
-//         'Unfiltered truth: Hidden forex markups, poor reward rates, and missed opportunities make most lifetime free cards expensive traps in 2026.',
-//       category: 'credit-cards',
-//       author: {
-//         name: 'Priya Sharma',
-//         bio: 'Ex-banker with 8+ years in credit card operations',
-//         image: '/images/blog/lifetime-free.avif',
-//       },
-//       publishedDate: '2026-01-05',
-//       updatedDate: '2026-01-05',
-//       readTime: '7 min',
-//       image: '/images/blog/lifetime-free.avif',
-//       tags: ['credit cards', 'hidden fees', 'lifetime free', 'beginners'],
-//       excerpt:
-//         'Everyone loves "free", but most lifetime free cards quietly cost you through low rewards, high forex charges, and better alternatives you miss.',
-//       featured: true,
-//     },
-//     {
-//       id: 'lic-vs-term-mf',
-//       slug: 'lic-endowment-vs-term-insurance-mutual-funds',
-//       title: 'LIC Policies vs Term Insurance + Mutual Funds: The 2026 Reality Check',
-//       metaDescription:
-//         'Why most Indians still lose money mixing insurance & investment. Real math shows Term + MF almost always wins — even in 2026.',
-//       category: 'insurance',
-//       author: {
-//         name: 'Rajesh Kumar',
-//         bio: 'Certified financial planner with 10+ years experience',
-//         image: '/images/authors/rajesh.webp',
-//       },
-//       publishedDate: '2026-01-02',
-//       updatedDate: '2026-01-02',
-//       readTime: '9 min',
-//       image: '/images/blog/lic-vs-mutual-funds.avif',
-//       tags: ['insurance', 'term plan', 'ulip', 'investment', 'comparison'],
-//       excerpt:
-//         'Endowment & ULIPs promise everything — but deliver poor returns and high charges. Here\'s the unfiltered comparison with real numbers.',
-//       featured: true,
-//     },
-//     {
-//       id: 'best-ltf-cc-2026',
-//       slug: 'top-lifetime-free-credit-cards-india-2026',
-//       title: 'Top Lifetime Free Credit Cards in India – 2026 Edition (No Traps)',
-//       metaDescription:
-//         'Best no-fee cards with actual value: Scapia, ICICI Amazon Pay, HDFC Millennia LTF offers — pros, cons & hidden catches.',
-//       category: 'credit-cards',
-//       author: {
-//         name: 'Vikram Singh',
-//         bio: 'Credit card rewards & offers expert',
-//         image: '/images/authors/vikram.webp',
-//       },
-//       publishedDate: '2025-12-28',
-//       updatedDate: '2025-12-28',
-//       readTime: '8 min',
-//       image: '/images/blog/lifetime-free-cc.webp',
-//       tags: ['credit cards', 'lifetime free', 'cashback', 'rewards'],
-//       excerpt:
-//         'Lifetime free doesnt always mean good. These actually deliver rewards without draining your pocket.',
-//       featured: true,
-//     },
-//     {
-//       id: 'emergency-fund-2026',
-//       slug: 'emergency-fund-how-much-where-2026',
-//       title: 'Emergency Fund in 2026: How Much & Where to Park It Safely',
-//       metaDescription:
-//         'Updated guide: 6–12 months expenses rule, best low-risk options, and why liquidity > returns.',
-//       category: 'personal-finance',
-//       author: {
-//         name: 'Sneha Reddy',
-//         bio: 'Personal finance educator',
-//         image: '/images/authors/sneha.webp',
-//       },
-//       publishedDate: '2025-12-20',
-//       updatedDate: '2025-12-20',
-//       readTime: '6 min',
-//       image: '/images/blog/emergency-fund.webp',
-//       tags: ['savings', 'emergency fund', 'financial planning'],
-//       excerpt:
-//         'Your emergency fund is insurance — not an investment. Heres where to keep it in high-inflation 2026.',
-//       featured: true,
-//     },
-//     {
-//       id: 'term-vs-ulip-2026',
-//       slug: 'term-insurance-vs-ulip-2026-which-better',
-//       title: 'Term Insurance vs ULIP 2026: The Verdict Most Advisors Wont Tell You',
-//       metaDescription:
-//         'Updated 2026 comparison: Lower ULIP charges vs pure protection. Math says term + MF still wins for 90% people.',
-//       category: 'insurance',
-//       author: {
-//         name: 'Neha Gupta',
-//         bio: 'Insurance analyst & educator',
-//         image: '/images/authors/neha.webp',
-//       },
-//       publishedDate: '2025-12-15',
-//       updatedDate: '2025-12-15',
-//       readTime: '8 min',
-//       image: '/images/blog/term-vs-ulip.webp',
-//       tags: ['insurance', 'term plan', 'ulip', 'comparison'],
-//       excerpt:
-//         'ULIPs improved in 2026 — but the gap with Term + MF hasn’t closed for most Indians.',
-//       featured: true,
-//     },
-//   ],
-
-//   categories: [
-//     {
-//       slug: 'credit-cards',
-//       name: 'Credit Cards',
-//       description: 'Unbiased reviews, devaluation alerts, reward hacks & hidden fee breakdowns',
-//       count: 26,
-//     },
-//     {
-//       slug: 'insurance',
-//       name: 'Insurance',
-//       description: 'Health, Term, Motor claims, policy fine-print decoding & real comparisons',
-//       count: 20,
-//     },
-//     {
-//       slug: 'investments',
-//       name: 'Investments',
-//       description: 'Mutual Funds, Stocks, Gold, FDs — honest analysis & market reality checks',
-//       count: 34,
-//     },
-//     {
-//       slug: 'personal-finance',
-//       name: 'Personal Finance',
-//       description: 'Taxation, budgeting, saving tricks, lifestyle inflation & future planning',
-//       count: 29,
-//     },
-//   ],
-// };
-
 export const blogsData = {
   topPicks: [
     {
@@ -338,7 +69,7 @@ export const blogsData = {
       publishedDate: '2026-01-10',
       updatedDate: '2026-01-10',
       readTime: '10 min',
-      image: 'https://www.cabkgoyal.com/wp-content/uploads/2024/07/old-vs-new-tax-regime-1024x576.jpg',
+      image: 'https://cd9941cc.delivery.rocketcdn.me/wp-content/uploads/2024/03/Lifetime-Free-HDFC-Credit-Cards-Conversion.webp',
       tags: ['taxation', 'tax planning', 'budget 2025', 'salary'],
       excerpt:
         'New regime now gives ₹12 lakh tax-free income threshold. But old regime can still win if you have substantial deductions like HRA, home loan interest, or Section 80C investments above ₹4-5 lakhs. Budget 2025 has made the new regime more attractive than ever, but it\'s not a one-size-fits-all solution. Your ideal choice depends on your salary structure, investments, and lifestyle expenses. This detailed comparison will help you make the right decision.',
@@ -425,7 +156,7 @@ export const blogsData = {
       publishedDate: '2026-01-12',
       updatedDate: '2026-01-12',
       readTime: '8 min',
-      image: '/images/blog/zero-forex-2026.webp',
+      image: 'https://cardmaven.in/wp-content/uploads/2026/01/Zero-Forex-Markup-Credit-Cards.png',
       tags: ['credit cards', 'travel', 'forex', 'rewards'],
       excerpt:
         'Forex markup silently kills your travel budget. Regular cards charge 3.5% + GST on every foreign transaction - that\'s ₹4,130 wasted on a ₹1 lakh spend. But there\'s good news: several Indian credit cards now offer zero forex markup, saving you thousands on international trips. Here are the real zero-markup winners and the ones to avoid in 2026, with honest pros, cons, and hidden limitations that banks won\'t tell you upfront.',
@@ -547,7 +278,7 @@ export const blogsData = {
       publishedDate: '2026-01-12',
       updatedDate: '2026-01-12',
       readTime: '8 min',
-      image: '/images/blog/zero-forex-2026.webp',
+      image: 'https://cardmaven.in/wp-content/uploads/2026/01/Zero-Forex-Markup-Credit-Cards.png',
       tags: ['credit cards', 'travel', 'forex', 'rewards'],
       excerpt:
         'Forex markup silently kills your travel budget. Regular cards charge 3.5% + GST on every foreign transaction - that\'s ₹4,130 wasted on a ₹1 lakh spend. But there\'s good news: several Indian credit cards now offer zero forex markup, saving you thousands on international trips.',
@@ -573,7 +304,7 @@ export const blogsData = {
       publishedDate: '2026-01-10',
       updatedDate: '2026-01-10',
       readTime: '10 min',
-      image: 'https://www.cabkgoyal.com/wp-content/uploads/2024/07/old-vs-new-tax-regime-1024x576.jpg',
+      image: 'https://static.toiimg.com/thumb/msid-126527231,width-1280,height-720,imgsize-154802,resizemode-4,overlay-toi_sw,pt-32,y_pad-600/photo.jpg',
       tags: ['taxation', 'tax planning', 'budget 2025', 'salary'],
       excerpt:
         'New regime now gives ₹12 lakh tax-free income threshold. But old regime can still win if you have substantial deductions like HRA, home loan interest, or Section 80C investments above ₹4-5 lakhs.',
@@ -599,7 +330,7 @@ export const blogsData = {
       publishedDate: '2026-01-08',
       updatedDate: '2026-01-08',
       readTime: '9 min',
-      image: '/images/blog/sip-2026.webp',
+      image: 'https://rupeezy.in/_next/image?url=https%3A%2F%2Frupeezy.in%2Fassets%2Fnextjs%2Fuploads%2Flarge_10_Best_SIP_for_Long_Term_2024_4978da95ad.png&w=3840&q=75',
       tags: ['investments', 'mutual funds', 'sip', 'long-term'],
       excerpt:
         'Markets volatile? Here are solid SIP choices for 10+ year horizon — with no sugar-coating. Equity mutual funds offer the best long-term returns but come with short-term volatility. Starting a SIP in 2026 requires choosing funds with proven track records, experienced fund managers, and diversified portfolios that can weather market storms.',
@@ -657,7 +388,7 @@ export const blogsData = {
       publishedDate: '2026-01-05',
       updatedDate: '2026-01-05',
       readTime: '7 min',
-      image: '/images/blog/lifetime-free.avif',
+      image: 'https://www.indiabonds.com/news-and-insight/wp-content/uploads/2025/07/2025-07-30-Lifetime-Free-Credit-Card.jpg',
       tags: ['credit cards', 'hidden fees', 'lifetime free', 'beginners'],
       excerpt:
         'Everyone loves "free", but most lifetime free cards quietly cost you through low rewards, high forex charges, and better alternatives you miss. The truth is that "lifetime free" is just a marketing gimmick.',
@@ -683,7 +414,7 @@ export const blogsData = {
       publishedDate: '2026-01-02',
       updatedDate: '2026-01-02',
       readTime: '9 min',
-      image: '/images/blog/lic-vs-mutual-funds.avif',
+      image: 'https://onlinechartered.com/wp-content/uploads/2023/05/Blog-imges-34.jpg',
       tags: ['insurance', 'term plan', 'ulip', 'investment', 'comparison'],
       excerpt:
         'Endowment & ULIPs promise everything — but deliver poor returns and high charges. Here\'s the unfiltered comparison with real numbers. LIC agents love saying "safety + returns" but the math tells a different story. Mixing insurance and investment almost never works in your favor.',
@@ -755,7 +486,7 @@ export const blogsData = {
       publishedDate: '2025-12-28',
       updatedDate: '2025-12-28',
       readTime: '8 min',
-      image: '/images/blog/lifetime-free-cc.webp',
+      image: 'https://cardmaven.in/wp-content/uploads/2025/11/Lifetime-Free-Credit-Cards.png',
       tags: ['credit cards', 'lifetime free', 'cashback', 'rewards'],
       excerpt:
         'Lifetime free doesn\'t always mean good. These actually deliver rewards without draining your pocket. After analyzing 50+ lifetime free cards, here are the ones that actually provide value without hidden catches or impossible spend requirements.',
@@ -833,7 +564,7 @@ export const blogsData = {
   publishedDate: '2025-12-15',
   updatedDate: '2025-12-15',
   readTime: '8 min',
-  image: '/images/blog/term-vs-ulip.webp',
+  image: 'https://www.policybachat.com/ArticlesImages/1299.jpg',
   tags: ['insurance', 'term plan', 'ulip', 'comparison'],
   excerpt:
     'ULIPs improved in 2026 — but the gap with Term + MF hasn\'t closed for most Indians. ULIP charges are now capped and transparency has improved, but the fundamental problem remains: combining insurance and investment rarely works in your favor.',

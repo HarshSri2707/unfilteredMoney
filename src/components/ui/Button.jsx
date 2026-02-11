@@ -36,7 +36,7 @@ const Button = ({
 
   const buttonAnimation = !animationConfig.prefersReducedMotion && !disabled
     ? {
-        whileHover: animationConfig.button.hover,
+        
         whileTap: animationConfig.button.tap,
       }
     : {};

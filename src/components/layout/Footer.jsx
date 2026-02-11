@@ -142,7 +142,7 @@ const Footer = () => {
         { name: 'Blog', path: '/blog' },
         { name: 'About Us', path: '/aboutus' },
         { name: 'Contact', path: '/contact' },
-        { name: 'FAQs', path: '/faq' },
+       
       ],
     },
     legal: {

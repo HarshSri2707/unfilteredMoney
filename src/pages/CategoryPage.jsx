@@ -253,7 +253,7 @@ const CategoryPage = ({ type }) => {
 
   return (
     <>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white pt-4">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary-600 to-accent-600 text-white py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
