@@ -215,73 +215,73 @@ const BlogList = () => {
             >
 
               {/* ── FEATURED HERO CARD ── */}
-              {featuredBlog && (
-                <motion.div
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="mb-6"
-                >
-                  <Link to={`/blog/${featuredBlog.slug}`} className="group block">
-                    <div className="relative rounded-2xl overflow-hidden bg-neutral-900 h-56 sm:h-72 md:h-80">
-                      <img
-                        src={featuredBlog.image}
-                        alt={featuredBlog.title}
-                        className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/95 via-neutral-900/65 to-transparent" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 via-transparent to-transparent" />
-                      <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-7 md:p-8 md:max-w-[62%]">
-                        <span className="inline-block w-fit bg-white/15 backdrop-blur-sm border border-white/25 text-white text-[9px] font-bold px-2.5 py-0.5 rounded-full mb-2.5 uppercase tracking-widest">
-                          Featured
-                        </span>
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-white/50 text-[10px]" style={{ fontFamily: 'Lato, sans-serif' }}>
-                            📅 {formatDate(featuredBlog.publishedDate)}
-                          </span>
-                          <span className="text-white/30">•</span>
-                          <span className="text-white/50 text-[10px]" style={{ fontFamily: 'Lato, sans-serif' }}>
-                            ⏱ {featuredBlog.readTime}
-                          </span>
-                        </div>
-                        <h2
-                          className="text-white text-lg sm:text-xl md:text-2xl font-extrabold leading-snug line-clamp-3 mb-3 group-hover:text-primary-200 transition-colors"
-                          style={{ fontFamily: 'Lato, sans-serif' }}
-                        >
-                          {featuredBlog.title}
-                        </h2>
-                        <p
-                          className="text-white/65 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-4 hidden sm:block"
-                          style={{ fontFamily: 'Lato, sans-serif' }}
-                        >
-                          {featuredBlog.excerpt}
-                        </p>
-                        <div className="flex items-center gap-3 flex-wrap">
-                          <div className="flex items-center gap-1.5">
-                            <div className="w-6 h-6 rounded-full bg-primary-400 overflow-hidden flex-shrink-0">
-                              {featuredBlog.author?.image ? (
-                                <img src={featuredBlog.author.image} alt="" className="w-full h-full object-cover"
-                                  onError={(e) => { e.target.style.display = 'none'; }} />
-                              ) : (
-                                <div className="w-full h-full flex items-center justify-center text-[10px] font-bold text-white">
-                                  {featuredBlog.author?.name?.[0] || 'A'}
-                                </div>
-                              )}
-                            </div>
-                            <span className="text-white/60 text-xs" style={{ fontFamily: 'Lato, sans-serif' }}>
-                              Written by {featuredBlog.author?.name}
-                            </span>
-                          </div>
-                          <span className="ml-auto bg-primary-600 hover:bg-primary-700 text-white text-xs font-bold px-5 py-1.5 rounded-full transition-colors">
-                            Read Article
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              )}
+             {featuredBlog && (
+  <motion.div
+    initial={{ opacity: 0, y: 14 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4 }}
+    className="mb-12"
+  >
+    <Link to={`/blog/${featuredBlog.slug}`} className="group block">
+      {/* Container: Laptop pe horizontal (row), Mobile pe vertical (col) */}
+      <div className="relative rounded-[32px] overflow-hidden bg-[#333333] flex flex-col md:flex-row min-h-[400px]">
+        
+        {/* 1. Text Content: Mobile pe pehle dikhega (order-1) */}
+        <div className="w-full md:w-[55%] p-6 sm:p-8 md:p-12 flex flex-col justify-center order-1">
+          <span className="inline-block w-fit bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[9px] font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-[0.2em]">
+            Featured
+          </span>
+          
+          <h2 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-4 group-hover:text-primary-200 transition-colors" style={{ fontFamily: 'Lato, sans-serif' }}>
+            {featuredBlog.title}
+          </h2>
+          
+          <p className="text-white/70 text-sm md:text-lg leading-relaxed line-clamp-3 mb-8" style={{ fontFamily: 'Lato, sans-serif' }}>
+            {featuredBlog.excerpt}
+          </p>
 
+          <div className="flex items-center gap-4 mb-8 text-white/50 text-[11px] md:text-sm">
+            <span className="flex items-center gap-1.5">📅 {formatDate(featuredBlog.publishedDate)}</span>
+            <span className="text-white/20">•</span>
+            <span className="flex items-center gap-1.5">⏱ {featuredBlog.readTime}</span>
+          </div>
+
+          <div className="flex items-center justify-between mt-auto gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary-400 overflow-hidden flex-shrink-0 border border-white/10">
+                {featuredBlog.author?.image ? (
+                  <img src={featuredBlog.author.image} alt="" className="w-full h-full object-contain-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center font-bold text-white bg-neutral-700">
+                    {featuredBlog.author?.name?.[0]}
+                  </div>
+                )}
+              </div>
+              <div>
+                <p className="text-white/40 text-[10px] uppercase tracking-wider">Written by</p>
+                <p className="text-white font-bold text-sm md:text-base">{featuredBlog.author?.name}</p>
+              </div>
+            </div>
+            
+            <span className="bg-white text-neutral-900 text-xs md:text-sm font-bold px-6 md:px-8 py-2.5 md:py-3 rounded-full transition-all group-hover:bg-primary-600 group-hover:text-white shadow-lg">
+              Read Article
+            </span>
+          </div>
+        </div>
+
+        {/* 2. Image: Mobile pe niche dikhegi (order-2) */}
+        <div className="w-full md:w-[45%] h-64 sm:h-80 md:h-auto order-2 overflow-hidden">
+          <img
+            src={featuredBlog.image}
+            alt={featuredBlog.title}
+            className="w-full h-full object-contain-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+          />
+        </div>
+
+      </div>
+    </Link>
+  </motion.div>
+)}
               {/* ── ARTICLES GRID ── */}
               {visibleGrid.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
