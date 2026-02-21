@@ -315,12 +315,7 @@ const CombinedSection = () => {
         Our Top Picks
       </motion.h2>
 
-      <Link
-        to="/top-picks"
-        className="text-sm text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-      >
-        View all
-      </Link>
+     
     </div>
 
     {/* Cards */}

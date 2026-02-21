@@ -143,7 +143,7 @@ const FAQ = () => {
 
   return (
     <motion.section
-      className="py-10 md:py-14 bg-neutral-50"
+      className="py-10 md:py-14 bg-gradient-to-b from-white to-blue-100"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}

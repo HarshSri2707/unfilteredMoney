@@ -131,7 +131,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-10 md:py-14 bg-neutral-50 overflow-hidden">
+    <section className="py-10 md:py-14 bg-gradient-to-b from-white to-gray-200 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading - Center aligned like screenshot */}
