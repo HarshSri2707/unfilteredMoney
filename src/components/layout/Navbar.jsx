@@ -333,8 +333,8 @@ const Navbar = () => {
 
         {/* ─── BLUE PILL BAR — visible on ALL screen sizes always ─── */}
         <div className="bg-white border-b border-neutral-100 py-2">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-primary-600 rounded-full px-4 py-1.5 flex items-center w-full">
+          <div className="w-full max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
+            <div className="bg-primary-600 rounded-full px-3 py-1.5 flex items-center w-full">
               {categoryLinks.map((link) => (
                 <div
                   key={link.name}
