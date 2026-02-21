@@ -3,6 +3,9 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Skeleton, { CardSkeleton } from "../components/ui/Skeleton";
 import CategoryPage from "../pages/CategoryPage";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsOfService from "../pages/TermsOfService";
+import Disclaimer from "../pages/Disclaimer";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import("../pages/Home"));
@@ -75,6 +78,11 @@ const AppRoutes = () => {
             path="/tools/insurance-calculator"
             element={<InsuranceCalculator />}
           />
+
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+
           {/* 404 - Not Found */}
           <Route path="*" element={<NotFound />} />
         </Routes>

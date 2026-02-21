@@ -133,7 +133,7 @@ const Footer = () => {
         { name: 'Credit Cards', path: '/credit-cards' },
         { name: 'Insurance', path: '/insurance' },
         { name: 'Investments', path: '/investments' },
-        { name: 'Tools & Calculators', path: '/tools' },
+        
       ],
     },
     resources: {
@@ -148,7 +148,7 @@ const Footer = () => {
     legal: {
       title: 'Legal',
       links: [
-        { name: 'Privacy Policy', path: '/privacy' },
+        { name: 'Privacy Policy', path: '/privacy-policy' },
         { name: 'Terms of Service', path: '/terms' },
         { name: 'Disclaimer', path: '/disclaimer' },
       ],
@@ -156,10 +156,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Twitter', icon: <FaXTwitter />, url: 'https://twitter.com/bidmetrix' },
-    { name: 'LinkedIn', icon: <FaLinkedinIn />, url: 'https://linkedin.com/company/bidmetrix' },
-    { name: 'Instagram', icon: <FaInstagram />, url: 'https://instagram.com/bidmetrix' },
-    { name: 'YouTube', icon: <FaYoutube />, url: 'https://youtube.com/@bidmetrix' },
+    { name: 'Twitter', icon: <FaXTwitter />, url: 'https://twitter.com' },
+    { name: 'LinkedIn', icon: <FaLinkedinIn />, url: 'https://linkedin.com' },
+    { name: 'Instagram', icon: <FaInstagram />, url: 'https://instagram.com' },
+    { name: 'YouTube', icon: <FaYoutube />, url: 'https://youtube.com' },
   ];
 
   return (
