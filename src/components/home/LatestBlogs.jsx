@@ -370,7 +370,7 @@ const LatestBlogs = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header row with title + View all */}
         <div className="flex items-center justify-between mb-6 md:mb-8">
@@ -440,13 +440,13 @@ const LatestBlogs = () => {
                     {/* Content */}
                     <div className="p-4 flex flex-col flex-1">
                       <h3
-                        className="text-sm md:text-base font-bold text-neutral-900 mb-2 leading-snug line-clamp-2 group-hover:text-primary-600 transition-colors"
+                        className="text-sm md:text-[16px] font-bold text-neutral-900 mb-2 leading-snug line-clamp-2 group-hover:text-primary-600 transition-colors"
                         style={{ fontFamily: 'Lato, sans-serif' }}
                       >
                         {blog.title}
                       </h3>
                       <p
-                        className="text-xs font-semibold text-neutral-500 leading-relaxed line-clamp-3 flex-1 mb-3"
+                        className="text-[15px] font-semibold text-neutral-500 leading-relaxed line-clamp-3 flex-1 mb-3"
                         style={{ fontFamily: 'Lato, sans-serif' }}
                       >
                         {blog.excerpt}

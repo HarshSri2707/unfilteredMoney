@@ -326,7 +326,7 @@ const WhyTrust = () => {
 
   return (
     <section className="py-10 md:py-14 bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading - Center aligned like screenshot */}
         <motion.div

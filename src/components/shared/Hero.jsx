@@ -85,7 +85,7 @@ const Hero = ({ data }) => {
 
   return (
     <section className="bg-white py-8 md:py-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-blue-50 rounded-2xl shadow-sm border border-neutral-100 p-6 md:p-8">
 
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>

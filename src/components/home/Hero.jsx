@@ -163,7 +163,7 @@ const Hero = () => {
     <section className="bg-white py-6 px-4 sm:px-6 lg:px-8">
 
       {/* ── Centered, max-w-6xl, rounded banner ── */}
-      <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden bg-neutral-900 pt-16 pb-12 md:pt-24 md:pb-16">
+      <div className="relative max-w-[1200px] mx-auto rounded-2xl overflow-hidden bg-neutral-900 pt-16 pb-12 md:pt-24 md:pb-16">
 
         {/* Background image & overlay */}
         <div className="absolute inset-0 z-0">

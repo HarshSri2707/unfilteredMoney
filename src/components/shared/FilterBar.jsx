@@ -265,7 +265,7 @@ const FilterBar = ({
       className="sticky z-30 bg-white border-b border-neutral-100 shadow-sm"
       style={{ top: navbarHeight > 0 ? `${navbarHeight}px` : '0px' }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-2.5 pb-2.5 flex flex-col gap-2">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pt-2.5 pb-2.5 flex flex-col gap-2">
 
         {/* ── Row 1: Category pills ── */}
         <div
@@ -300,7 +300,7 @@ const FilterBar = ({
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Search..."
-            className="w-full pl-4 pr-9 py-2 rounded-xl border border-neutral-200 bg-white text-sm font-semibold text-neutral-700 placeholder:text-neutral-400 placeholder:font-normal focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all"
+            className="w-full pl-4 pr-9 py-2 rounded-full border border-neutral-200 bg-white text-sm font-semibold text-neutral-700 placeholder:text-neutral-400 placeholder:font-normal focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all"
             style={{ fontFamily: 'Lato, sans-serif' }}
           />
           {searchValue ? (

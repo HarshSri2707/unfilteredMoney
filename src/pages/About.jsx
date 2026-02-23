@@ -780,7 +780,7 @@ const About = () => {
 
       {/* ── HERO SECTION — centered, max-w-6xl, rounded banner ── */}
       <section className="bg-white py-6 px-4 sm:px-6 lg:px-8">
-        <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden bg-neutral-900">
+        <div className="relative max-w-[1210px] mx-auto rounded-2xl overflow-hidden bg-neutral-900">
           {/* Background image */}
           <div className="absolute inset-0">
             <img
@@ -819,7 +819,7 @@ const About = () => {
 
       {/* ── OUR STORY ── */}
       <section className="py-10 md:py-14 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
 
             {/* Left: text */}
@@ -876,7 +876,7 @@ const About = () => {
 
       {/* ── DEMOCRATISING FINANCIAL INTELLIGENCE ── */}
       <section className="py-10 md:py-14 bg-neutral-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}
@@ -925,7 +925,7 @@ const About = () => {
 
       {/* ── MEET OUR TEAM ── */}
       <section className="py-10 md:py-14 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}
@@ -1024,7 +1024,7 @@ const About = () => {
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }}

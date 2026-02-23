@@ -929,7 +929,7 @@ const BlogList = () => {
         className="sticky z-30 bg-white border-b border-neutral-100 shadow-sm"
         style={{ top: navbarHeight > 0 ? `${navbarHeight}px` : '0px' }}
       >
-        <div className="max-w-5xl mx-auto px-4 pt-2.5 pb-2.5 flex flex-col gap-2">
+        <div className="max-w-[1200px] mx-auto px-4 pt-2.5 pb-2.5 flex flex-col gap-2">
 
           {/* ── ROW 1: Category pills ── */}
           <div
@@ -962,7 +962,7 @@ const BlogList = () => {
               placeholder="Search"
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setShowAll(false); }}
-              className="w-full pl-4 pr-9 py-2 rounded-xl border border-neutral-200 bg-neutral-50 text-sm text-neutral-700 placeholder:text-neutral-400 focus:outline-none focus:border-primary-400 focus:bg-white transition-all"
+              className="w-full pl-4 pr-9 py-2 rounded-full border border-neutral-200 bg-neutral-50 text-sm text-neutral-700 placeholder:text-neutral-400 focus:outline-none focus:border-primary-400 focus:bg-white transition-all"
               style={{ fontFamily: 'Lato, sans-serif' }}
             />
             {searchQuery ? (
@@ -989,7 +989,7 @@ const BlogList = () => {
       </div>
 
       {/* ══════ BODY ══════ */}
-      <div className="max-w-5xl mx-auto px-4 pb-8">
+      <div className="max-w-[1200px] mx-auto px-4 pb-8">
 
         {/* Section label */}
         <div className="flex items-center gap-3 pt-6 pb-5" ref={gridRef}>
@@ -1024,62 +1024,64 @@ const BlogList = () => {
             >
 
               {/* ── FEATURED HERO CARD ── */}
-             {featuredBlog && (
+{featuredBlog && (
   <motion.div
     initial={{ opacity: 0, y: 14 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4 }}
-    className="mb-12"
+    className="mb-8" // Margin bottom thoda kam kiya
   >
     <Link to={`/blog/${featuredBlog.slug}`} className="group block">
-      {/* Container: Laptop pe horizontal (row), Mobile pe vertical (col) */}
-      <div className="relative rounded-[32px] overflow-hidden bg-[#333333] flex flex-col md:flex-row min-h-[400px]">
+      {/* Container: min-h ko 300px se ghata kar 220px-260px range mein kiya hai */}
+      <div className="relative rounded-[24px] overflow-hidden bg-[#333333] flex flex-col md:flex-row min-h-[220px] md:min-h-[260px]">
         
-        {/* 1. Text Content: Mobile pe pehle dikhega (order-1) */}
-        <div className="w-full md:w-[55%] p-6 sm:p-8 md:p-12 flex flex-col justify-center order-1">
-          <span className="inline-block w-fit bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[9px] font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-[0.2em]">
+        {/* 1. Text Content: Padding ko kam kiya (p-6 aur md:p-8) */}
+        <div className="w-full md:w-[55%] p-5 sm:p-6 md:p-8 flex flex-col justify-center order-1">
+          <span className="inline-block w-fit bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[8px] font-bold px-2.5 py-0.5 rounded-full mb-3 uppercase tracking-[0.15em]">
             Featured
           </span>
           
-          <h2 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-4 group-hover:text-primary-200 transition-colors" style={{ fontFamily: 'Lato, sans-serif' }}>
+          {/* Title size ko desktop par thoda compress kiya (md:text-3xl) */}
+          <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-extrabold leading-tight mb-2 group-hover:text-primary-200 transition-colors" style={{ fontFamily: 'Lato, sans-serif' }}>
             {featuredBlog.title}
           </h2>
           
-          <p className="text-white/70 text-sm md:text-lg leading-relaxed line-clamp-3 mb-8" style={{ fontFamily: 'Lato, sans-serif' }}>
+          {/* Excerpt ki lines aur margin kam ki */}
+          <p className="text-white/70 text-xs md:text-sm leading-relaxed line-clamp-2 mb-4" style={{ fontFamily: 'Lato, sans-serif' }}>
             {featuredBlog.excerpt}
           </p>
 
-          <div className="flex items-center gap-4 mb-8 text-white/50 text-[11px] md:text-sm">
-            <span className="flex items-center gap-1.5">📅 {formatDate(featuredBlog.publishedDate)}</span>
+          <div className="flex items-center gap-3 mb-4 text-white/50 text-[10px] md:text-xs">
+            <span className="flex items-center gap-1">📅 {formatDate(featuredBlog.publishedDate)}</span>
             <span className="text-white/20">•</span>
-            <span className="flex items-center gap-1.5">⏱ {featuredBlog.readTime}</span>
+            <span className="flex items-center gap-1">⏱ {featuredBlog.readTime}</span>
           </div>
 
-          <div className="flex items-center justify-between mt-auto gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary-400 overflow-hidden flex-shrink-0 border border-white/10">
+          <div className="flex items-center justify-between mt-auto gap-3">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary-400 overflow-hidden flex-shrink-0 border border-white/10">
                 {featuredBlog.author?.image ? (
-                  <img src={featuredBlog.author.image} alt="" className="w-full h-full object-contain-cover" />
+                  <img src={featuredBlog.author.image} alt="" className="w-full h-full object-cover" />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center font-bold text-white bg-neutral-700">
+                  <div className="w-full h-full flex items-center justify-center text-[10px] font-bold text-white bg-neutral-700">
                     {featuredBlog.author?.name?.[0]}
                   </div>
                 )}
               </div>
               <div>
-                <p className="text-white/40 text-[10px] uppercase tracking-wider">Written by</p>
-                <p className="text-white font-bold text-sm md:text-base">{featuredBlog.author?.name}</p>
+                <p className="text-white/40 text-[9px] uppercase tracking-wider leading-none">Written by</p>
+                <p className="text-white font-bold text-xs md:text-sm">{featuredBlog.author?.name}</p>
               </div>
             </div>
             
-            <span className="bg-white text-neutral-900 text-xs md:text-sm font-bold px-6 md:px-8 py-2.5 md:py-3 rounded-full transition-all group-hover:bg-primary-600 group-hover:text-white shadow-lg">
+            <span className="bg-white text-neutral-900 text-[10px] md:text-xs font-bold px-4 md:px-6 py-2 rounded-full transition-all group-hover:bg-primary-600 group-hover:text-white shadow-md">
               Read Article
             </span>
           </div>
         </div>
 
-        {/* 2. Image: Mobile pe niche dikhegi (order-2) */}
-        <div className="w-full md:w-[45%] h-64 sm:h-80 md:h-auto order-2 overflow-hidden">
+        {/* 2. Image: Height ko fixed rakha hai taaki zyada space na le */}
+        <div className="w-full md:w-[45%] h-48 sm:h-56 md:h-auto order-2 overflow-hidden">
           <img
             src={featuredBlog.image}
             alt={featuredBlog.title}
@@ -1127,13 +1129,13 @@ const BlogList = () => {
                             </span>
                           </div>
                           <h3
-                            className="text-sm font-bold text-neutral-900 mb-1.5 leading-snug line-clamp-2 group-hover:text-primary-600 transition-colors"
+                            className="text-[15px] font-bold text-neutral-900 mb-1.5 leading-snug line-clamp-2 group-hover:text-primary-600 transition-colors"
                             style={{ fontFamily: 'Lato, sans-serif' }}
                           >
                             {blog.title}
                           </h3>
                           <p
-                            className="text-neutral-400 text-xs leading-relaxed line-clamp-2 mb-3 flex-1"
+                            className="text-neutral-500 text-[14px] leading-relaxed line-clamp-2 mb-3 flex-1"
                             style={{ fontFamily: 'Lato, sans-serif' }}
                           >
                             {blog.excerpt}

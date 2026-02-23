@@ -691,7 +691,7 @@ const CombinedSection = () => {
     <>
       {/* ── EXPLORE FINANCIAL PRODUCTS ── */}
       <section className="py-10 md:py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
           <motion.div
             className="text-center mb-8"
@@ -723,10 +723,10 @@ const CombinedSection = () => {
                     <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary-50 flex items-center justify-center mb-3 group-hover:bg-primary-100 transition-colors">
                       {item.icon}
                     </div>
-                    <h3 className="text-sm md:text-base font-bold text-neutral-900 mb-1" style={{ fontFamily: 'Lato, sans-serif' }}>
+                    <h3 className="text-sm md:text-[15px] font-bold text-neutral-900 mb-1" style={{ fontFamily: 'Lato, sans-serif' }}>
                       {item.name}
                     </h3>
-                    <p className="text-xs font-semibold text-neutral-500 leading-relaxed hidden sm:block" style={{ fontFamily: 'Lato, sans-serif' }}>
+                    <p className="text-[13px] md:text-[14px] font-semibold text-neutral-500 leading-relaxed hidden sm:block" style={{ fontFamily: 'Lato, sans-serif' }}>
                       {item.description}
                     </p>
                   </div>
@@ -739,7 +739,7 @@ const CombinedSection = () => {
 
       {/* ── OUR TOP PICKS ── */}
     <section className="py-10 md:py-14 bg-gray-50">
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
     {/* Header */}
     <div className="flex items-center justify-between mb-8">
@@ -801,10 +801,10 @@ const CombinedSection = () => {
 
               {/* Description */}
               <div className="mb-6 flex-1">
-                <p className="text-xs font-bold text-neutral-700 mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
+                <p className="text-[15px] font-bold text-neutral-700 mb-2" style={{ fontFamily: 'Lato, sans-serif' }}>
                   Benefits & Features
                 </p>
-                <p className="text-sm font-semibold text-neutral-500 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
+                <p className="text-[14px] font-semibold text-neutral-500 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
                   {pick.pros
                     ? pick.pros.slice(0, 2).join('. ')
                     : pick.description || ''}
@@ -854,7 +854,7 @@ const CombinedSection = () => {
               {/* CTA */}
               <Link
                 to={pick.ctaLink}
-                className="w-full block text-center py-3 rounded-xl bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
+                className="w-full block text-center py-3 rounded-full bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
               >
                 {pick.cta}
               </Link>

@@ -584,7 +584,7 @@ const TopPicks = ({ picks = [], type, onProductClick, isFiltered = false }) => {
           transition={{ duration: 0.35, ease: 'easeInOut' }}
           className="overflow-hidden bg-white"
         >
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
             <motion.h2
               className="text-xl md:text-2xl font-extrabold text-neutral-900 mb-6"
@@ -646,10 +646,10 @@ const TopPicks = ({ picks = [], type, onProductClick, isFiltered = false }) => {
                       </div>
 
                       <div className="mb-4 flex-1">
-                        <p className="text-xs font-bold text-neutral-600 mb-1" style={{ fontFamily: 'Lato, sans-serif' }}>
+                        <p className="text-[15px] font-bold text-neutral-600 mb-1" style={{ fontFamily: 'Lato, sans-serif' }}>
                           Why We Picked This:
                         </p>
-                        <p className="text-xs font-semibold text-neutral-500 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
+                        <p className="text-[14px] font-semibold text-neutral-500 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
                           {pick.pros ? pick.pros.slice(0, 2).join('. ') : pick.description || '—'}
                         </p>
                       </div>
@@ -682,7 +682,7 @@ const TopPicks = ({ picks = [], type, onProductClick, isFiltered = false }) => {
                       </div>
 
                       <button
-                        className="w-full py-2.5 rounded-xl bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
+                        className="w-full py-2.5 rounded-full bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
                         style={{ fontFamily: 'Lato, sans-serif' }}
                         onClick={(e) => { e.stopPropagation(); onProductClick?.(pick); }}
                       >

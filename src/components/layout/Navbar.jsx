@@ -378,7 +378,7 @@ const Navbar = () => {
                           <Link
                             key={item.name}
                             to={item.path}
-                            className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                            className="block px-4 py-2.5 text-sm font-bold text-neutral-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
                             style={{ fontFamily: 'Lato, sans-serif' }}
                           >
                             {item.name}

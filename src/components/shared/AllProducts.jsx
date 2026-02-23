@@ -446,7 +446,7 @@ const AllProducts = ({ products = [], type, title, onProductClick, searchValue =
 
   return (
     <section className="py-8 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {title && (
           <motion.h2
@@ -557,7 +557,7 @@ const AllProducts = ({ products = [], type, title, onProductClick, searchValue =
                     )}
 
                     <button
-                      className="w-full py-3 rounded-xl bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
+                      className="w-full py-3 rounded-full bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
                       style={{ fontFamily: 'Lato, sans-serif' }}
                       onClick={(e) => { e.stopPropagation(); onProductClick?.(product); }}
                     >
