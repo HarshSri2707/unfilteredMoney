@@ -42,7 +42,7 @@ const BlogDetail = () => {
       <div className="min-h-screen bg-white">
         {/* Breadcrumb Skeleton */}
         <section className="bg-white border-b border-neutral-200">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center gap-2">
               <div className="h-4 w-12 bg-neutral-200 rounded animate-pulse"></div>
               <span>›</span>
