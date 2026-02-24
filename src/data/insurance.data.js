@@ -386,7 +386,7 @@ export const insuranceData = {
       name: 'Term Life Insurance',
       description: 'Pure protection for your family\'s financial future',
       icon: '🛡️',
-      image: '/images/insurance/category-term.jpg',
+      bannerImage: '/images/banner/Term insurance image.png',
       color: 'from-blue-500 to-indigo-600'
     },
     {
@@ -395,7 +395,7 @@ export const insuranceData = {
       name: 'Health Insurance',
       description: 'Medical coverage for you and your loved ones',
       icon: '❤️',
-      image: '/images/insurance/category-health.jpg',
+      bannerImage: '/images/banner/Health insurance.png',
       color: 'from-red-500 to-pink-600'
     },
     {
@@ -404,7 +404,7 @@ export const insuranceData = {
       name: 'Vehicle Insurance',
       description: 'Protect your car or bike from accidents & theft',
       icon: '🚗',
-      image: '/images/insurance/category-vehicle.jpg',
+      bannerImage: '/images/banner/Vehicle insurance.png',
       color: 'from-green-500 to-emerald-600'
     }
   ],

@@ -334,28 +334,32 @@ export const investmentsData = {
       slug: 'mutual-funds',
       name: 'Mutual Funds & SIPs',
       description: 'The disciplined way to turn small monthly savings into a large corpus. Perfect for beginners.',
-      icon: '📊'
+      icon: '📊',
+      bannerImage: '/images/banner/Investment image.png',
     },
     {
       id: 'fixed-income',
       slug: 'fixed-income',
       name: 'Fixed Income & Gold',
       description: 'Safe harbors for your hard-earned money',
-      icon: '🏦'
+      icon: '🏦',
+      bannerImage: '/images/banner/Fixed income & gold.png',
     },
     {
       id: 'stocks',
       slug: 'stocks',
       name: 'Stock Market',
       description: 'Own a piece of the companies you love. High risk, high reward.',
-      icon: '📈'
+      icon: '📈',
+      bannerImage: '/images/banner/Stock market.png'
     },
     {
       id: 'retirement',
       slug: 'retirement',
       name: 'Retirement Plans',
       description: 'NPS, PPF, and pension schemes',
-      icon: '🎯'
+      icon: '🎯',
+      bannerImage: '/images/banner/Retirement plans.png'
     }
   ],
 

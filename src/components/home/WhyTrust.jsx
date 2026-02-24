@@ -299,6 +299,7 @@ const WhyTrust = () => {
       title: 'No Bias',
       description: 'Zero referral links from banks. Our revenue comes from users, not the brands we review.',
     },
+    
     {
       icon: (
         <svg className="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

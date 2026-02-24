@@ -403,36 +403,39 @@ export const creditCardsData = {
       featured: false
     }
   ],
-
-  categories: [
+categories: [
     {
       id: 'lifetime-free',
       slug: 'lifetime-free',
       name: 'Lifetime Free Cards',
       description: 'No annual fee, ever. Perfect for beginners & low-risk users.',
-      icon: '🆓'
+      icon: '🆓',
+      bannerImage: '/images/banner/Lifetime free Credit card.png',
     },
     {
       id: 'travel',
       slug: 'travel',
       name: 'Travel & Lounge Access',
       description: 'Airport lounges, forex benefits & travel rewards.',
-      icon: '✈️'
+      icon: '✈️',
+      bannerImage: '/images/banner/Travel & lounge.png',
     },
     {
       id: 'cashback',
       slug: 'cashback',
       name: 'Cashback Cards',
       description: 'Save on online shopping, fuel & everyday spends.',
-      icon: '💰'
+      icon: '💰',
+      bannerImage: '/images/banner/Cashback page.png',
     },
     {
       id: 'premium',
       slug: 'premium',
       name: 'Premium Cards',
       description: 'Luxury benefits, high rewards & exclusive privileges.',
-      icon: '👑'
-    }
+      icon: '👑',
+      bannerImage: '/images/banners/premium.webp',
+    },
   ],
 
   faqData: [

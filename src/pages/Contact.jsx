@@ -886,43 +886,7 @@ const Contact = () => {
       />
 
       {/* ── HERO — same as before (centered rounded banner) ── */}
-      <section className="bg-neutral-100 py-6 px-4 sm:px-6 lg:px-8">
-        <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden bg-neutral-900">
-          <div className="absolute inset-0">
-            <img
-              src="/images/contact.avif"
-              alt=""
-              className="w-full h-full object-cover blur-sm"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/60" />
-          </div>
-          <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-10 lg:px-12 py-16 md:py-24 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <span className="inline-block px-4 py-2 bg-white/80 text-neutral-900 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 shadow-lg">
-                💬 Get in Touch
-              </span>
-              <h1
-                className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-                style={{ fontFamily: 'Lato, sans-serif', fontWeight: 900 }}
-              >
-                Have Questions?<br />We're Here to Help
-              </h1>
-              <p
-                className="text-lg md:text-2xl text-white max-w-2xl mx-auto mb-8 leading-relaxed"
-                style={{ fontFamily: 'Lato, sans-serif' }}
-              >
-                Whether you need expert advice or have feedback, our team is ready to assist you.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* ── CONTACT SECTION — as per image: left info + right form card ── */}
       <section className="py-14 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

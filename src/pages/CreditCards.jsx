@@ -326,6 +326,95 @@
 
 // export default CreditCards;
 
+// import { useState } from 'react';
+// import { motion } from 'framer-motion';
+// import { creditCardsData } from '../data/creditCards.data';
+// import Hero from '../components/shared/Hero';
+// import FilterBar from '../components/shared/FilterBar';
+// import TopPicks from '../components/shared/TopPicks';
+// import AllProducts from '../components/shared/AllProducts';
+// import FAQ from '../components/shared/FAQ';
+// import CTA from '../components/shared/CTA';
+// import ProductDetailModal from '../components/shared/ProductDetailModal';
+// import Seo from '../components/ui/Seo';
+// import { seoConfig } from '../config/seo.config';
+
+// const CreditCards = () => {
+//   const [selectedProduct, setSelectedProduct]   = useState(null);
+//   const [selectedCategory, setSelectedCategory] = useState('all');
+//   const [searchValue, setSearchValue]           = useState('');
+
+//   const isFiltered = selectedCategory !== 'all' || searchValue.trim() !== '';
+
+//   const filteredProducts = creditCardsData.allCards.filter((card) => {
+//     const matchCat = selectedCategory === 'all' ||
+//       card.category === selectedCategory ||
+//       card.slug === selectedCategory;
+//     const matchSearch = !searchValue ||
+//       card.name?.toLowerCase().includes(searchValue.toLowerCase()) ||
+//       card.bank?.toLowerCase().includes(searchValue.toLowerCase());
+//     return matchCat && matchSearch;
+//   });
+
+//   return (
+//     <>
+//       <Seo
+//         title={seoConfig.pages.creditCards?.title}
+//         description={seoConfig.pages.creditCards?.description}
+//         keywords={seoConfig.pages.creditCards?.keywords}
+//         url={`${seoConfig.siteUrl}/credit-cards`}
+//         image={seoConfig.defaultImage}
+//       />
+//       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
+//        <Hero
+//           data={{
+//             title: 'Credit Cards: Financial Tool, Not a Debt Trap!',
+//             description: [
+//               "If you use it correctly, credit cards can be a great financial tool in your wallet. Unlike popular opinion, it isn't a debt trap, but a powerful tool that offers convenience and rewards.",
+//               'If used wisely, it can help you enjoy rewards like free flights, cashback on groceries, and interest-free periods. However, if used unscrupulously, it may push you towards a debt trap with high interest.',
+//               'At Unfiltered Money, we help you compare and choose the right card suitable for your exact needs and stay on the winning side.',
+//             ],
+//             points: [
+//               { title: 'Travel Frequently?', description: 'Look for air miles, lounge access & low forex markup cards.', icon: '✈️' },
+//               { title: 'Love Online Shopping?', description: 'Choose cards with flat cashback, fuel surcharge waivers & partner rewards.', icon: '🛒' },
+//               { title: 'First-Time User?', description: 'Start with "Lifetime Free" cards — no annual fees to build credit safely.', icon: '🌱' },
+//               { title: 'High Spender?', description: 'Go for premium cards with milestone benefits & high reward rates.', icon: '👑' },
+//             ],
+//           }}
+//         />
+//         <FilterBar
+//           categories={creditCardsData.categories}
+//           selectedCategory={selectedCategory}
+//           setSelectedCategory={setSelectedCategory}
+//           searchValue={searchValue}
+//           setSearchValue={setSearchValue}
+//         />
+//         <TopPicks
+//           picks={creditCardsData.topPicks}
+//           type="credit-cards"
+//           onProductClick={setSelectedProduct}
+//           isFiltered={isFiltered}
+//         />
+//         <AllProducts
+//           products={filteredProducts}
+//           type="credit-cards"
+//           title={isFiltered ? `Results (${filteredProducts.length})` : 'All Credit Cards'}
+//           onProductClick={setSelectedProduct}
+//           searchValue={searchValue}
+//         />
+//         <FAQ faqs={creditCardsData.faqData} />
+//         <CTA data={{ title: 'Still Confused? Connect with us', buttonText: 'Contact Us', buttonLink: '/contact' }} />
+//       </motion.div>
+//       {selectedProduct && (
+//         <ProductDetailModal product={selectedProduct} type="credit-cards" onClose={() => setSelectedProduct(null)} />
+//       )}
+//     </>
+//   );
+// };
+
+// export default CreditCards;
+
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { creditCardsData } from '../data/creditCards.data';
@@ -366,22 +455,39 @@ const CreditCards = () => {
         image={seoConfig.defaultImage}
       />
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
-       <Hero
+
+        <Hero
           data={{
-            title: 'Credit Cards: Financial Tool, Not a Debt Trap!',
+            // \n se title break hoga, highlightWord blue mein dikhega
+            title: 'Credit Cards:\nFinancial Tool, Not a Debt Trap!',
+            highlightWord: 'Debt Trap!',
+
+            // Right side pe dikhne wali hero image — apna path daal do
+            heroImage: 'images/banner/Credit card main page image.png',
+
+            // Left side bullet points
             description: [
               "If you use it correctly, credit cards can be a great financial tool in your wallet. Unlike popular opinion, it isn't a debt trap, but a powerful tool that offers convenience and rewards.",
               'If used wisely, it can help you enjoy rewards like free flights, cashback on groceries, and interest-free periods. However, if used unscrupulously, it may push you towards a debt trap with high interest.',
               'At Unfiltered Money, we help you compare and choose the right card suitable for your exact needs and stay on the winning side.',
             ],
+
+            // Auto-rotating carousel (bullets ke niche)
             points: [
-              { title: 'Travel Frequently?', description: 'Look for air miles, lounge access & low forex markup cards.', icon: '✈️' },
+              { title: 'Travel Frequently?',    description: 'Look for air miles, lounge access & low forex markup cards.',             icon: '✈️' },
               { title: 'Love Online Shopping?', description: 'Choose cards with flat cashback, fuel surcharge waivers & partner rewards.', icon: '🛒' },
-              { title: 'First-Time User?', description: 'Start with "Lifetime Free" cards — no annual fees to build credit safely.', icon: '🌱' },
-              { title: 'High Spender?', description: 'Go for premium cards with milestone benefits & high reward rates.', icon: '👑' },
+              { title: 'First-Time User?',      description: 'Start with "Lifetime Free" cards — no annual fees to build credit safely.',  icon: '🌱' },
+              { title: 'High Spender?',         description: 'Go for premium cards with milestone benefits & high reward rates.',         icon: '👑' },
             ],
+
+            // White tip card — bottom left (image mein "First time user?" wala)
+            tip: {
+              label: 'First time user?',
+              text: 'Start with "Lifetime Free" cards — no annual fees to build credit safely',
+            },
           }}
         />
+
         <FilterBar
           categories={creditCardsData.categories}
           selectedCategory={selectedCategory}
@@ -389,6 +495,7 @@ const CreditCards = () => {
           searchValue={searchValue}
           setSearchValue={setSearchValue}
         />
+
         <TopPicks
           picks={creditCardsData.topPicks}
           type="credit-cards"
@@ -404,7 +511,9 @@ const CreditCards = () => {
         />
         <FAQ faqs={creditCardsData.faqData} />
         <CTA data={{ title: 'Still Confused? Connect with us', buttonText: 'Contact Us', buttonLink: '/contact' }} />
+
       </motion.div>
+
       {selectedProduct && (
         <ProductDetailModal product={selectedProduct} type="credit-cards" onClose={() => setSelectedProduct(null)} />
       )}
