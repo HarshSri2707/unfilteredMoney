@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CTA = ({ data }) => {
   return (
-    <section className="py-12 bg-gradient-to-br from-primary-600 to-accent-600">
+    <section className="py-12 bg-primary-600 opacity-400 ">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ const CTA = ({ data }) => {
           </p>
           <Link
             to='/contact'
-            className="inline-block bg-white text-primary-600 px-8 py-3 rounded-xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            className="inline-block bg-white text-primary-600 px-8 py-3 rounded-full font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105"
           >
             {data.buttonText} →
           </Link>

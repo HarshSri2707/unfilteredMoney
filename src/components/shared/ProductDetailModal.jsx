@@ -770,7 +770,7 @@ const ProductDetailModal = ({ product, type, onClose }) => {
           {/* ── FIXED BOTTOM CTA ── */}
           <div className="border-t border-neutral-100 px-5 py-4 bg-white flex-shrink-0">
             <button
-              className="w-full py-3.5 rounded-xl bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
+              className="w-full py-3.5 rounded-full bg-primary-600 text-white text-sm font-bold hover:bg-primary-700 active:scale-[0.98] transition-all"
               style={{ fontFamily: 'Lato, sans-serif' }}
               onClick={() => {
                 if (product.applyLink) window.open(product.applyLink, '_blank');
