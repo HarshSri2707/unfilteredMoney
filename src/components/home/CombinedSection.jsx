@@ -1002,7 +1002,7 @@ const CombinedSection = () => {
                       <img
                         src={pick.img}
                         alt={pick.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-contain-cover transition-transform duration-500 "
                         onError={(e) => { e.target.style.display = 'none'; }}
                       />
 
